@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  body {
+    font-family: Avenir-Roman sans-serif;
+    letter-spacing: 0.5px;
+    background-color: #fcfcfc;
+  }
+  
+  h1 {
+    @apply text-2xl;
+  }
+  
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-2xl my-2;
+  }
+
+  p {
+    @apply text-sm my-2;
+  }
+}

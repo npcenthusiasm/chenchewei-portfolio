@@ -1,0 +1,30 @@
+{
+  "editor.tabSize": 2,
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    }
+  ],
+  // "editor.formatOnSave": false,
+  "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "vue": "html",
+    "vue-html": "html",
+  },
+  "tailwindCSS.colorDecorators": "on",
+  "editor.colorDecorators": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
