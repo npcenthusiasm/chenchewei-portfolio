@@ -22,8 +22,8 @@
         <nuxt-link class="mx-10 text-base" to="/contact" @click.native="close">Contact</nuxt-link>
       </div>
       <div class="flex">
-        <div class="mx-10">Try</div>
-        <div class="ml-10">Read</div>
+        <nuxt-link class="mx-10" to="/try" @click.native="close">Try</nuxt-link>
+        <nuxt-link class="ml-10" to="/read" @click.native="close">Read</nuxt-link>
       </div>
     </div>
     <div class="flex md:hidden">

@@ -22,7 +22,7 @@
     @apply text-2xl my-2;
   }
 
-  p {
-    @apply text-sm my-2;
+  p, li {
+    @apply text-base my-2 md:text-sm;
   }
 }
