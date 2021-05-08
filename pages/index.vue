@@ -2,25 +2,49 @@
   <div>
     <Banner />
     <div class="container mx-auto">
-      <h3>Product Design <span>for Daily Utilities</span></h3>
-      <div class="flex flex-wrap m-auto">
-        <Product v-for="i in 9" :key="i" class="w-4/12 " :class="(i) % 3 === 0 ? 'pr-0': 'pr-6'"/>
+      <!-- <h3 class="mx-7 lg:mx-0 flex flex-wrap">Product Design <span></span></h3> -->
+      <div class="mx-7 lg:mx-0 flex items-center flex-wrap md:flex-nowrap">
+        <h3>Product Design</h3>
+        <p class="w-full md:w-auto md:ml-4">for Daily Utilities</p>
+      </div>
+      
+      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-3 md:grid-cols-3 gap-5">
+        <Product v-for="i in 9" :key="i"
+          title="apple"
+          description="descriptiondescriptiondescription"
+        />
       </div>
     </div>
 
-    <div class="container mx-auto">
-      <h3>Interface Design <span>for Web & App</span></h3>
-      <div class="flex flex-wrap m-auto">
-        <Product v-for="i in 3" :key="i" class="w-4/12 " :class="(i) % 3 === 0 ? 'pr-0': 'pr-6'"/>
-      </div>
-    </div>
+    <hr class="mx-7 my-11 md:my-11 bg-customgray">
+
 
     <div class="container mx-auto">
-      <h3>Logo Design <span>for Web & App</span></h3>
-      <div class="flex flex-wrap m-auto" v-if="products.length > 0">
-        <Product v-for="(p, i) in products" :key="i"
-          class="w-4/12 " :class="(i) % 3 === 0 ? 'pr-0': 'pr-6'"
-          :item="p"
+      <div class="mx-7 lg:mx-0 flex items-center flex-wrap md:flex-nowrap">
+        <h3>Interface Design</h3>
+        <p class="w-full md:w-auto md:ml-4">for Web & App</p>
+      </div>
+      
+     
+      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1   md:grid-cols-3 gap-5">
+        <Product v-for="i in 3" :key="i"
+          title="apple"
+          description="descriptiondescriptiondescription"
+        />
+      </div>
+    </div>
+    
+    <hr class="mx-7 my-11 md:my-11 bg-customgray">
+
+    <div class="container mx-auto">
+      <div class="mx-7 lg:mx-0 flex items-center flex-wrap md:flex-nowrap">
+        <h3>Logo Design</h3>
+        <p class="w-full md:w-auto md:ml-4">for Web & App</p>
+      </div>
+      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1   md:grid-cols-3 gap-5">
+        <Product v-for="i in 3" :key="i"
+          title="apple"
+          description="descriptiondescriptiondescription"
         />
       </div>
     </div>

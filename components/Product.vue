@@ -1,15 +1,9 @@
 <template>
-  <div class="mb-16">
-    <div style="height: 280px; background-color: #f5f5f5;" @click="goProduct">
-      <img src="~assets/img/chair.jpg" alt="" class="w-full h-full object-cover">
-    </div>
-    <!-- <nuxt-link style="height: 280px; background-color: #f5f5f5;"
-      :to="{ name: 'projects-id', params: { id: item.title }}">
-      <img src="~assets/img/chair.jpg" alt="" class="w-full h-full object-cover">
-    </nuxt-link> -->
-    <div v-if="item">{{ item.title }}</div>
-    <div v-if="item">{{ item.description }}</div>
-  </div>
+  <nuxt-link class="" :to="`/projects/${title}`">
+    <div class="bg-no-repeat bg-cover bg-center" style="padding-bottom:68%; background-color:#f5f5f5" :style="`background-image:url(${''}})`"></div>
+    <div>{{ title }}</div>
+    <p>{{ description }}</p>
+  </nuxt-link>
 </template>
 
 <script>
@@ -18,11 +12,17 @@ export default {
     item: {
       type: Object,
       default: () => {}
+    },
+    title: {
+      type: String
+    },
+    description: {
+      type: String
     }
   },
   methods: {
     goProduct () {
-      this.$router.push(`/projects/${this.item.title}`)
+      this.$router.push(`/projects/${this.title}`)
     }
   }
 }
