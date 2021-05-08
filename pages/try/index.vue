@@ -10,10 +10,11 @@
     </div>
 
     <div class="px-7 lg:px-0 grid grid-rows-2 grid-cols-2 md:grid-rows-2 md:grid-cols-4 gap-5">
-      <div v-for="(p, i) in products" :key="i">
+      <nuxt-link v-for="(p, i) in products" :key="i"
+        :to="{ name: 'try-id', params: { id: p.ename }}">
         <div class="bg-no-repeat bg-cover bg-center" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.url})`"></div>
         <h3 class="text-base md:text-sm">{{ p.title }}</h3>
-      </div>
+      </nuxt-link>
     </div>
 
   </div>
@@ -23,18 +24,22 @@
 const products = [
   {
     url: '',
+    ename: 'light',
     title: '長春市場的光'
   },
   {
     url: '',
+    ename: 'light2',
     title: '長春市場'
   },
   {
     url: '',
+    ename: 'light3',
     title: '市場的光'
   },
   {
     url: '',
+    ename: 'light4',
     title: '長春市場的光'
   }
 ]
