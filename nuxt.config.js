@@ -1,12 +1,12 @@
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/<repository_name>/'
+    base: '/Vue-Nuxt-example/'
   }
 } : {}
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  target: process.env.DEPLOY_ENV === 'GH_PAGES' ? 'static' : 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
