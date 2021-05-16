@@ -6,8 +6,11 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: process.env.DEPLOY_ENV === 'GH_PAGES' ? 'static' : 'server',
-
+  target: 'static',
+  router: {
+    base: '/Vue-Nuxt-example/'
+  },
+  // ...routerBase,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: '陳哲瑋 - 作品集',
@@ -29,7 +32,9 @@ export default {
     // import style (>= Swiper 6.x)
     // 'swiper/swiper-bundle.css'
     // import style (<= Swiper 5.x)
-    // 'swiper/css/swiper.css'
+    // 'swiper/dist/css/swiper.css'
+    // 'swiper/dist/css/swiper.css'
+    { src: "swiper/swiper-bundle.css" }
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -52,6 +57,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    vendor: [
+      'swiper' // 避免多次引入多次加载swiper资源文件
+    ]
   },
   // Defaults options
   tailwindcss: {
@@ -60,7 +68,5 @@ export default {
     jit: true,
     exposeConfig: false,
     config: {}
-  },
-
-  ...routerBase
+  }
 }
