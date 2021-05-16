@@ -29,7 +29,7 @@ export default {
     // import style (>= Swiper 6.x)
     // 'swiper/swiper-bundle.css'
     // import style (<= Swiper 5.x)
-    'swiper/css/swiper.css'
+    // 'swiper/css/swiper.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
