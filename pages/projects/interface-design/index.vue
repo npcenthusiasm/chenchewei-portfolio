@@ -5,7 +5,7 @@
       <p class="w-full text-sm  md:w-auto md:ml-4">for Daily Utilities</p>
     </div>
     <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-3 md:grid-cols-3 gap-5 mb-20">
-      <Product v-for="(p, i) in products" :key="i"
+      <Product v-for="(p, i) in interfaces" :key="i"
         :title="p.title"
         :img="p.img"
         :description="p.description"
@@ -17,9 +17,9 @@
 <script>
 export default {
   computed: {
-    products () {
-      return this.$store.getters.getProductByCategory('product')
-    }
+    interfaces () {
+      return this.$store.getters.getProductByCategory('interface')
+    },
   }
 }
 </script>

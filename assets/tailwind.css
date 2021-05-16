@@ -19,10 +19,11 @@
   }
 
   h3 {
-    @apply text-2xl my-2;
+    @apply text-2xl;
+
   }
 
   p, li {
-    @apply text-base my-2 md:text-sm;
+    @apply text-base md:text-sm;
   }
 }

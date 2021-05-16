@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <div class="px-7 lg:px-0 grid grid-rows-2 grid-cols-2 md:grid-rows-2 md:grid-cols-4 gap-5">
+    <div class="mx-7 lg:px-0 grid grid-rows-2 grid-cols-2 md:grid-rows-2 md:grid-cols-4 gap-5 mb-10">
       <nuxt-link v-for="(p, i) in products" :key="i"
         :to="{ name: 'try-id', params: { id: p.ename }}">
         <div class="bg-no-repeat bg-cover bg-center" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.url})`"></div>

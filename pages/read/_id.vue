@@ -10,22 +10,25 @@
 
   <hr class="mx-0 my-11 md:my-4 bg-customgray">
 
-  <div v-swiper="swiperOption">
-    <div class="swiper-wrapper">
+  <div class="mb-10 mx-7 lg:mx-0">
+    <div v-swiper="swiperOption">
+      <div class="swiper-wrapper">
 
-      <!-- <div class="px-7 lg:px-0 grid grid-rows-2 grid-cols-2 md:grid-rows-2 md:grid-cols-4 gap-5"> -->
-      <nuxt-link v-for="(p, i) in products" :key="i"
-        class="swiper-slide"
-        :to="{ name: 'read-id', params: { id: p.ename }}">
-        <div class="bg-no-repeat bg-cover bg-center" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.url})`"></div>
-        <h3 class="text-base md:text-sm">{{ p.title }}</h3>
-      </nuxt-link>
-      <!-- </div> -->
+        <!-- <div class="px-7 lg:px-0 grid grid-rows-2 grid-cols-2 md:grid-rows-2 md:grid-cols-4 gap-5"> -->
+        <nuxt-link v-for="(p, i) in products" :key="i"
+          class="swiper-slide"
+          :to="{ name: 'read-id', params: { id: p.ename }}">
+          <div class="bg-no-repeat bg-cover bg-center" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.url})`"></div>
+          <h3 class="text-base md:text-sm">{{ p.title }}</h3>
+        </nuxt-link>
+        <!-- </div> -->
+      </div>
+      <div class="swiper-pagination swiper-pagination-bullets"></div>
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
     </div>
-    <div class="swiper-pagination swiper-pagination-bullets"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
   </div>
+
   </div>
 </template>
 

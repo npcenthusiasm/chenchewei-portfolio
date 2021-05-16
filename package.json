@@ -11,13 +11,15 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.0",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
-    "swiper": "^6.5.9",
-    "vue-awesome-swiper": "^4.1.1"
+    "swiper": "^5.3.7",
+    "vue-awesome-swiper": "^4.1.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.0.1",
+    "csvtojson": "^2.0.10",
     "cross-env": "^7.0.3",
     "postcss": "^8.2.13",
     "push-dir": "^0.4.1"

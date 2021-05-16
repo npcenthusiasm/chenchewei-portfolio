@@ -23,7 +23,8 @@
     <div class="mx-7 py-4 md:py-12">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
-          <h3>Product Design</h3>
+        <h3 class="text-2xl font-normal text-black-900">Product Design</h3>
+
         </div>
         <div class="w-full md:w-8/12">
           <p>喜歡透過黏土、紙張、保麗龍等方式製作草模，</p>

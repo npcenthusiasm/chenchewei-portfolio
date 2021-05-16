@@ -2,6 +2,7 @@
   <div class="bg-shonwhite">
     <Navbar />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 

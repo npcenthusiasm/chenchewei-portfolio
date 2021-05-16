@@ -7,6 +7,7 @@ class SwiperOption {
     this.loopFillGroupWithBlank = true
     this.pagination = {
       el: '.swiper-pagination',
+      type: "bullets",
       clickable: true
     },
     this.navigation = {

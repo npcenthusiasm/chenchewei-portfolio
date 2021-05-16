@@ -10,7 +10,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'text',
+    title: '陳哲瑋 - 作品集',
     htmlAttrs: {
       lang: 'en'
     },
@@ -27,12 +27,14 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     // import style (>= Swiper 6.x)
-    'swiper/swiper-bundle.css'
+    // 'swiper/swiper-bundle.css'
+    // import style (<= Swiper 5.x)
+    'swiper/css/swiper.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/VueAwesomeSwiper.js'}
+    { src: '~/plugins/VueAwesomeSwiper.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
