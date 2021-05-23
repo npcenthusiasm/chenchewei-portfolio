@@ -4,13 +4,17 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {}
 
+// const target = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+//   router: {
+//     base: '/Vue-Nuxt-example/'
+//   }
+// } : {}
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
-  router: {
-    base: '/Vue-Nuxt-example/'
-  },
-  // ...routerBase,
+  target: process.env.DEPLOY_ENV === 'GH_PAGES' ? 'static' : 'server',
+  ...routerBase,
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: '陳哲瑋 - 作品集',
@@ -53,6 +57,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

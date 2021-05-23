@@ -6,9 +6,10 @@
     </div>
     <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-3 md:grid-cols-3 gap-5 mb-20">
       <Product v-for="(p, i) in products" :key="i"
+        :id="p.id"
         :title="p.title"
         :img="p.img"
-        :description="p.description"
+        :description="p.simple_desc"
       />
     </div>
   </div>

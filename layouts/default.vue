@@ -6,6 +6,13 @@
   </div>
 </template>
 
+<script>
+export default {
+  created () {
+    this.$store.dispatch('getProducts')
+  }
+}
+</script>
 <style lang="css">
 
 </style>
