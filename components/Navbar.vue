@@ -1,33 +1,35 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <div class="z-10" :class="open ? 'fixed bg-white left-0 right-0' : ''">
+  <div class="z-10" :class="open ? 'fixed bg-white left-0 right-0' : ''" style="background-color:#fcfcfc">
     <div class="container mx-auto px-7 lg:px-0">
       
-      <nav class="text-lg h-21 flex justify-between items-center">
-        <nuxt-link class="text-gray-900 tracking-wide font-medium" to="/" @click.native="close">CHEWEI</nuxt-link>
+      <nav class="text-base h-21 flex justify-between items-center">
+        <div class="w-4/12">
+          <nuxt-link class="text-lg text-gray-900 tracking-wide font-medium" to="/" @click.native="close">CHEWEI</nuxt-link>
+        </div>
         <div class="hidden lg:flex">
           <div class="flex">
             <div class="relative group">
-              <div class="px-10 text-base">Projects</div>
+              <div class="mr-19">Projects</div>
               <div class="mt-4 flex absolute z-10 opacity-0 transform -translate-y-6  h-0 bg-grey-200
                 group-hover:h-20 group-hover:opacity-100 transition duration-200
                 group-hover:translate-y-0
               ">
-                <nuxt-link class="pl-10 pr-10 text-base whitespace-nowrap" to="/projects/product-design">Product Design</nuxt-link>
-                <nuxt-link class="pr-10 text-base whitespace-nowrap" to="/projects/interface-design">Interface Design</nuxt-link>
-                <nuxt-link class="pr-10 text-base whitespace-nowrap" to="/projects/logo">Logo</nuxt-link>
+                <nuxt-link class="mr-19 whitespace-nowrap" to="/projects/product-design">Product Design</nuxt-link>
+                <nuxt-link class="mr-19 whitespace-nowrap" to="/projects/interface-design">Interface Design</nuxt-link>
+                <nuxt-link class="mr-19 whitespace-nowrap" to="/projects/logo-design">Logo Design</nuxt-link>
               </div>
               <div class="fixed max-h-0 h-full  top-16 w-full left-0 right-0 transition-all duration-200 opacity-0 bg-shonwhite
                 group-hover:opacity-100 group-hover:max-h-20"></div>
             </div>
-            <nuxt-link class="mx-10 text-base" to="/about" @click.native="close">About</nuxt-link>
-            <nuxt-link class="mx-10 text-base" to="/services" @click.native="close">Services</nuxt-link>
-            <nuxt-link class="mx-10 text-base" to="/contact" @click.native="close">Contact</nuxt-link>
+            <nuxt-link class="mr-19" to="/about" @click.native="close">About</nuxt-link>
+            <nuxt-link class="mr-19" to="/services" @click.native="close">Services</nuxt-link>
+            <nuxt-link class="mr-19" to="/contact" @click.native="close">Contact</nuxt-link>
           </div>
-          <div class="flex">
-            <nuxt-link class="mx-10" to="/try" @click.native="close">Try</nuxt-link>
-            <nuxt-link class="ml-10" to="/read" @click.native="close">Read</nuxt-link>
-          </div>
+        </div>
+        <div class="flex">
+          <nuxt-link class="mr-19" to="/try" @click.native="close">Try</nuxt-link>
+          <nuxt-link to="/read" @click.native="close">Read</nuxt-link>
         </div>
         <div class="flex lg:hidden">
           <Burger
