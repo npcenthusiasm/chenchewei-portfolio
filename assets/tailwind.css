@@ -5,9 +5,12 @@
 @layer base {
 
   body {
-    font-family: Avenir-Roman sans-serif;
+    font-family: Avenir Nunito Sans sans-serif;
     letter-spacing: 0.5px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
     background-color: #fcfcfc;
+    @apply text-black-900;
   }
   
   h1 {
@@ -24,6 +27,33 @@
   }
 
   p, li {
+
     @apply text-base md:text-sm;
   }
+
+  
+  h1, h2, h3, h4, h5, h6, hr, figure, p {
+    line-height: 1.7;
+  }
+
+  /* .tracking-1px {
+    letter-spacing: 1px;
+  } */
+  /* .text-xs,
+  .text-sm,
+  .text-base,
+  .text-md,
+  .text-lg,
+  .text-xl,
+  .text-2xl,
+  .text-3xl,
+  .text-4xl{
+    line-height: 1.7;
+    
+  } */
+}
+
+
+.tracking-1px {
+  letter-spacing: 1px;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-24">
+  <div class="container mx-auto max-w-screen-lgs">
     <!-- 96 -->
     <!-- (1290 - 1090) / 2 = 95 -->
     
@@ -19,18 +19,18 @@
         </div>
         <div class="w-auto lg:w-2/12"></div>
 
-        <div class="w-auto lg:w-3/12">
+        <div class="w-auto lg:w-3/12 text-xss">
           <ul class="mb-8 lg:mb-5">
-            <li class="text-xs mb-2" v-for="(member, index) in product.en_member_info" :key="index">
+            <li class="mb-2" v-for="(member, index) in product.en_member_info" :key="index">
               <span class="capitalize text-black-500 mr-2">{{ member.key }}</span>
               <span class="text-black-900 font-semibold">{{ member.value.join(', ') }}</span>
             </li>
           </ul>
 
           <ul class="mb-8 lg:mb-5">
-            <li class="text-xs mb-2" v-for="(member, index) in product.cn_member_info" :key="index">
+            <li class="mb-2" v-for="(member, index) in product.cn_member_info" :key="index">
               <span class="capitalize text-black-500 mr-2">{{ member.key }}</span>
-              <span class="text-black-900 font-semibold">{{ member.value.join(', ') }}</span>
+              <span class="text-black-900 font-semibold">{{ member.value.join('、') }}</span>
             </li>
           </ul>
         </div>
