@@ -1,53 +1,60 @@
 <template>
-  <div class="container mx-auto max-w-screen-lgs">
+  <div class="container mx-auto px-7 md:py-0 max-w-screen-lgs">
     <!-- 96 -->
     <!-- (1290 - 1090) / 2 = 95 -->
     
     <div v-if="product" class="mt-12">
-      <div class="mb-15">
+      <div class="mb-5 md:mb-15">
         <div class="bg-no-repeat bg-cover bg-center"
           style="padding-bottom:64.2%; background-color:#f5f5f5"
           :style="`background-image:url(${product.detail_main_img})`"></div>
       </div>
 
-      <h2 class="mb-4 text-xl lg:text-2xl text-black-900">{{ product.title }}</h2>
+      <h2 class="mb-4 text-1xl lg:text-2xl text-black-900">{{ product.title }}</h2>
 
-      <div class="flex flex-col lg:flex-row text-black-900 mb-15">
-        <div class="w-auto lg:w-7/12">
-          <p class="mb-8 lg:mb-5">{{ product.en_desc }}</p>
-          <p>{{ product.cn_desc }}</p>
+      <div class="flex flex-col md:flex-row md:flex-wrap">
+
+        <div class="order-1 w-auto mb-6 md:w-7/12 md:mb-15">
+          <div class="w-auto lg:w-7/12">
+            <p class="text-sm mb-8 mb-3 md:mb-5">{{ product.en_desc }}</p>
+            <p class="text-sm tracking-widest">{{ product.cn_desc }}</p>
+          </div>
+
         </div>
-        <div class="w-auto lg:w-2/12"></div>
+        <div class="hidden md:block md:order-2 md:w-2/12"></div>
 
-        <div class="w-auto lg:w-3/12 text-xss">
-          <ul class="mb-8 lg:mb-5">
-            <li class="mb-2" v-for="(member, index) in product.en_member_info" :key="index">
-              <span class="capitalize text-black-500 mr-2">{{ member.key }}</span>
-              <span class="text-black-900 font-semibold">{{ member.value.join(', ') }}</span>
+        <div class="order-4 w-auto mb-12 md:order-3 md:w-3/12 text-xss">
+          <ul class="mb-8 md:mb-4">
+            <li class="mb-1 leading-none" v-for="(member, index) in product.en_member_info" :key="index">
+              <span class="text-xss capitalize text-black-500 mr-2">{{ member.key }}</span>
+              <span class="text-xss text-black-900 font-bold">{{ member.value.join(', ') }}</span>
             </li>
           </ul>
 
-          <ul class="mb-8 lg:mb-5">
-            <li class="mb-2" v-for="(member, index) in product.cn_member_info" :key="index">
-              <span class="capitalize text-black-500 mr-2">{{ member.key }}</span>
-              <span class="text-black-900 font-semibold">{{ member.value.join('、') }}</span>
+          <ul class="">
+            <li class="mb-1 tracking-wider leading-none" v-for="(member, index) in product.cn_member_info" :key="index">
+              <span class="text-xss capitalize text-black-500 mr-2">{{ member.key }}</span>
+              <span class="text-xss text-black-900 font-bold">{{ member.value.join('、') }}</span>
             </li>
           </ul>
+        </div>
+
+        <div class="order-3 w-full mb-17 md:order-4 md:mb-33">
+          <div
+            v-for="(img, index) in product.detail_imgs" :key="index"
+            class="bg-no-repeat bg-cover bg-center mb-4 last:mb-0"
+            style="padding-bottom:64.2%; background-color:#f5f5f5"
+            :style="`background-image:url(${img})`">
+          </div>
         </div>
       </div>
-
-    <div
-      v-for="(img, index) in product.detail_imgs" :key="index"
-      class="bg-no-repeat bg-cover bg-center mb-4"
-      style="padding-bottom:64.2%; background-color:#f5f5f5"
-      :style="`background-image:url(${img})`"></div>
     </div>
 
     <div v-else>
       prodcut no found
     </div>
 
-    <hr class="mt-11 lg:mt-33 lg:mb-17 bg-customgray">
+    <hr class="mb-11 md:mb-17 bg-customgray">
     <div class="mb-30" v-if="products.length > 0">
       <div v-swiper="swiperOption" class="swiper-pb">
         <div class="swiper-wrapper">
@@ -55,7 +62,7 @@
             class="swiper-slide"
             :to="{ name: 'try-id', params: { id: p.id }}">
             <div class="bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:68.5%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
-            <h3 class="text-sm text-black-900 md:text-sm">{{ p.title }}</h3>
+            <h3 class="text-sm font-semibold md:text-sm">{{ p.title }}</h3>
           </nuxt-link>
         </div>
         <div class="swiper-pagination"></div>
