@@ -1,7 +1,7 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div class="z-10" :class="open ? 'fixed bg-white left-0 right-0' : ''" style="background-color:#fcfcfc">
-    <div class="container mx-auto px-7 lg:px-0">
+    <div class="container mx-auto px-7 lg:px-0 mb-12">
       
       <nav class="text-base h-21 flex justify-between items-center">
         <div class="w-4/12">

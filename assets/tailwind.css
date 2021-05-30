@@ -5,8 +5,7 @@
 @layer base {
 
   body {
-    font-family: Avenir Nunito Sans sans-serif;
-    letter-spacing: 0.5px;
+    font-family: Avenir, Nunito Sans, sans-serif;
     line-height: 1.7;
     letter-spacing: 0.3px;
     background-color: #fcfcfc;
@@ -36,24 +35,5 @@
     line-height: 1.7;
   }
 
-  /* .tracking-1px {
-    letter-spacing: 1px;
-  } */
-  /* .text-xs,
-  .text-sm,
-  .text-base,
-  .text-md,
-  .text-lg,
-  .text-xl,
-  .text-2xl,
-  .text-3xl,
-  .text-4xl{
-    line-height: 1.7;
-    
-  } */
 }
 
-
-.tracking-1px {
-  letter-spacing: 1px;
-}

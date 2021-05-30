@@ -1,25 +1,40 @@
 <template>
-  <div class="container mx-auto">
-    <div class="mx-7 md:mx-0 h-52 md:h-96" style="background-color:#f5f5f5"></div>
+  <div class="container mx-auto max-w-screen-lgs">
+    <div class="mx-7 mb-15 md:mb-12 md:mx-0 h-52 md:h-96 flex flex-col md:flex-row" style="background-color:#f5f5f5">
+      <div class="w-full md:w-4/12">
+      </div>
+      <div class="w-full md:w-8/12">
+        <div class="h-full flex justify-center items-center">
+          <video
+            class="md:rounded-2xl w-80 h-55"
+            autoplay
+            src="https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/about%2Fservice%20-%20mobile%2002.mp4?alt=media&token=2bb244d1-1736-4fb7-8a9c-845f6df05306"></video>
+          </div>
+      </div>
+    </div>
 
-    <div class="mx-7 py-4 md:py-12">
+    <div class="mx-7 mb-15 md:mb-12 lg:mx-0">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
-          <h3>Services</h3>
+          <h3 class="text-2xl mb-10 md:text-lg font-normal">Services</h3>
         </div>
-        <div class="w-full md:w-8/12">
+        <div class="w-full md:w-8/12 text-sm">
           <p v-for="s in services" :key="s.title"
-            class="mb-3">{{ s.title }}</p>
+            class="mb-3 last:mb-0">
+            <span>{{ s.en_title }}</span>
+            <span class="mx-2">|</span>
+            <span class="tracking-widest">{{ s.cn_title }}</span>
+          </p>
         </div>
       </div>
     </div>
 
-    <hr class="mx-7 my-11 md:mx-0 md:my-4 bg-customgray">
+    <!-- <hr class="mx-7 my-11 md:mx-0 md:my-4 bg-customgray"> -->
 
-    <div class="mx-7 py-4 md:py-12">
+    <!-- <div class="mx-7 py-4 md:py-12">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
-          <h3>Process</h3>
+          <h3 class="text-2xl mb-10 md:text-lg font-normal">Process</h3>
         </div>
         <div class="w-full md:w-8/12">
           <div v-for="(item, i) in process" :key="item.id">
@@ -29,18 +44,20 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <hr class="mx-7 my-11 md:mx-0 md:my-4 bg-customgray">
+    <hr class="mx-7 mb-15 md:mb-12 lg:mx-0 bg-customgray">
 
-    <div class="mx-7 py-4 md:py-12">
+    <div class="mx-7 mb-15 md:mb-11 lg:mx-0">
       <div class="flex flex-col md:flex-row">
-        <div class="w-full md:w-4/12 pr-0 md:pr-24">
-          <h3>Friends</h3>
-          <p class="">They are my friends in different fields, please feel free to contact them if there is any need.</p>
+        <div class="w-full mb-11 md:mb-0 md:w-4/12 pr-0 md:pr-22">
+          <h3 class="text-2xl mb-3 md:text-lg font-normal">Friends</h3>
+          <p class="text-black-700 text-base md:text-sm">They are some of my dearest friends from different fields. Feel free to make contact with them and find out more about their expertises.</p>
         </div>
         <div class="w-full md:w-8/12">
-          <p v-for="f in friends" :key="f.name">{{ f.pos }} <span class="font-medium">{{ f.name }}</span></p>
+          <p v-for="f in friends" :key="f.name" class="mb-5 md:mb-4 last:mb-0">
+            <span class="text-black-700 mr-2">{{ f.pos }}</span>
+            <span class="font-medium">{{ f.name }}</span></p>
         </div>
       </div>
     </div>
@@ -52,16 +69,20 @@
 <script>
 const services = [
   {
-    title: 'Product Design | 產品設計',
+    en_title: 'Product Design',
+    cn_title: '產品設計'
   },
   {
-    title: 'Web Design | 網頁設計',
+    en_title: 'Web Design',
+    cn_title: '網頁設計'
   },
   {
-    title: 'App Design | App 設計',
+    en_title: 'App Design',
+    cn_title: 'App 設計'
   },
   {
-    title: 'Logo | 標誌設計',
+    en_title: 'Logo',
+    cn_title: '標誌設計'
   }
 ]
 
@@ -96,19 +117,19 @@ const process = [
 const friends = [
   {
     pos: 'Atelier',
-    name: 'totle Studio Shul'
+    name: 'Studio Shul'
   },
   {
     pos: 'Graphic Designer',
-    name: 'totle Wei-Cheng Liao'
+    name: 'Wei-Cheng Liao'
     },
   {
     pos: 'Graphic Designer',
-    name: 'totle Chi-Fan Chung'
+    name: 'Chi-Fan Chung'
     },
   {
     pos: 'Illustrator',
-    name: 'totle Chih-Yi Lin'
+    name: 'Chih-Yi Lin'
   }
 ]
 
