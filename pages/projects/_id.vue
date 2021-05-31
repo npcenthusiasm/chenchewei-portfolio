@@ -41,10 +41,10 @@
 
         <div class="order-3 w-full mb-17 md:order-4 md:mb-33">
           <div
-            v-for="(img, index) in product.detail_imgs" :key="index"
+            v-for="(imgData, index) in product.detail_imgs" :key="index"
             class="bg-no-repeat bg-cover bg-center mb-4 last:mb-0"
             style="padding-bottom:64.2%; background-color:#f5f5f5"
-            :style="`background-image:url(${img})`">
+            :style="`background-image:url(${imgData.img})`">
           </div>
         </div>
       </div>

@@ -94,13 +94,22 @@ export default {
   },
   computed: {
     products () {
-      return this.$store.getters.getProductByCategory('product')
+      const products = this.$store.getters.getProductByCategory('product')
+      products.sort((a, b) => a.position > b.position ? 1 : -1)
+      const items = products.filter(product => product.show)
+      return items
     },
     interfaces () {
-      return this.$store.getters.getProductByCategory('interface')
+      const products = this.$store.getters.getProductByCategory('interface')
+      products.sort((a, b) => a.position > b.position ? 1 : -1)
+      const items = products.filter(product => product.show)
+      return items
     },
     logos () {
-      return this.$store.getters.getProductByCategory('logo')
+      const products = this.$store.getters.getProductByCategory('logo')
+      products.sort((a, b) => a.position > b.position ? 1 : -1)
+      const items = products.filter(product => product.show)
+      return items
     },
     // products () {
     //   return this.$store.state.products
