@@ -54,10 +54,11 @@
           <h3 class="text-2xl mb-3 md:text-lg font-normal">Friends</h3>
           <p class="text-black-700 text-base md:text-sm">They are some of my dearest friends from different fields. Feel free to make contact with them and find out more about their expertises.</p>
         </div>
-        <div class="w-full md:w-8/12">
-          <p v-for="f in friends" :key="f.name" class="mb-5 md:mb-4 last:mb-0">
+        <div class="w-full md:w-8/12 text-sm">
+          <div v-for="f in friends" :key="f.name" class="mb-5 md:mb-4 last:mb-0">
             <span class="text-black-700 mr-2">{{ f.pos }}</span>
-            <span class="font-medium">{{ f.name }}</span></p>
+            <a :href="f.link" target="_blank" class="font-medium">{{ f.name }}</a>
+          </div>
         </div>
       </div>
     </div>
@@ -117,19 +118,23 @@ const process = [
 const friends = [
   {
     pos: 'Atelier',
-    name: 'Studio Shul'
+    name: 'Studio Shul',
+    link: 'https://studioshul.com/'
   },
   {
     pos: 'Graphic Designer',
-    name: 'Wei-Cheng Liao'
-    },
+    name: 'Wei-Cheng Liao',
+    link: 'https://www.liaoweicheng.com/'
+  },
   {
     pos: 'Graphic Designer',
-    name: 'Chi-Fan Chung'
+    name: 'Chi-Fan Chung',
+    link: 'https://chungchifan.com'
     },
   {
     pos: 'Illustrator',
-    name: 'Chih-Yi Lin'
+    name: 'Chih-Yi Lin',
+    link: 'https://chihyicc.co'
   }
 ]
 
