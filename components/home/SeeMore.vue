@@ -1,5 +1,5 @@
 <template>
-  <div class="text-right mt-15">
+  <div class="text-right mt-10 md:mt-15">
     <router-link :to="to"
       class="inline-block text-black-900 text-sm">
       <div class="flex items-center">

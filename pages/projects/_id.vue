@@ -60,7 +60,7 @@
         <div class="swiper-wrapper">
           <nuxt-link v-for="(p, i) in products" :key="i"
             class="swiper-slide"
-            :to="{ name: 'try-id', params: { id: p.id }}">
+            :to="{ name: 'projects-id', params: { id: p.id }}">
             <div class="bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:68.5%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
             <h3 class="text-sm font-semibold md:text-sm">{{ p.title }}</h3>
           </nuxt-link>
@@ -126,7 +126,8 @@ export default {
     },
     products () {
       if (this.product) {
-        return [this.product, this.product, this.product, this.product, this.product, this.product]
+        const products = this.$store.getters.getProductByCategory(this.product.category)
+        return products.filter(p => p.id !== this.product.id)
       }
       return []
     }

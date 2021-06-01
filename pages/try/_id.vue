@@ -1,71 +1,88 @@
 <template>
   <div class="container mx-auto">
   
-  <div class="mx-7 md:mx-auto" style="max-width: 720px">
-    <div class="bg-no-repeat bg-cover bg-center" style="padding-bottom:66.666%; background-color:#f5f5f5" :style="`background-image:url()`"></div>
-    <p>敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。</p>
-    <div class="bg-no-repeat bg-cover bg-center" style="padding-bottom:66.666%; background-color:#f5f5f5" :style="`background-image:url()`"></div>
-    <p>敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。</p>
-    <p>敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。</p>
+  <div class="mx-7 mt-11 md:mt-12 md:mx-auto" style="max-width: 720px">
+    <div class="mb-5 md:mb-6 last:mb-0" v-for="(item, index) in 2" :key="index">
+      <div class="bg-no-repeat bg-cover bg-center mb-2 md:mb-6" style="padding-bottom:66.666%; background-color:#f5f5f5" :style="`background-image:url()`"></div>
+      <p class="text-sm">敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。</p>
+    </div>
   </div>
 
-  <hr class="mx-0 my-11 md:my-4 bg-customgray">
-  <div class="mb-10 mx-7 lg:mx-0">
+  <hr class="mx-0 mt-12 mb-11 md:mt-33 md:mb-17  bg-customgray">
+  <!-- <div class="mb-10 mx-7 lg:mx-0">
     <div v-swiper="swiperOption">
       <div class="swiper-wrapper">
-
-        <!-- <div class="px-7 lg:px-0 grid grid-rows-2 grid-cols-2 md:grid-rows-2 md:grid-cols-4 gap-5"> -->
         <nuxt-link v-for="(p, i) in products" :key="i"
           class="swiper-slide"
           :to="{ name: 'try-id', params: { id: p.ename }}">
           <div class="bg-no-repeat bg-cover bg-center" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.url})`"></div>
           <h3 class="text-base md:text-sm">{{ p.title }}</h3>
         </nuxt-link>
-        <!-- </div> -->
       </div>
       <div class="swiper-pagination swiper-pagination-bullets"></div>
-      <!-- <div class="swiper-button-prev"></div> -->
-      <!-- <div class="swiper-button-next"></div> -->
     </div>
-  </div>
+  </div> -->
+  <div class="mx-7 md:mx-0 mb-30" v-if="products.length > 0">
+      <div v-swiper="swiperOption" class="swiper-pb">
+        <!-- // TODO:  swiper distance -->
+        <div class="swiper-wrapper">
+          <nuxt-link v-for="(p, i) in products" :key="i"
+            class="swiper-slide"
+            :to="{ name: 'try-id', params: { id: p.id }}">
+            <div class="bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
+            <h3 class="text-sm font-semibold">{{ p.cn_title }}</h3>
+          </nuxt-link>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-const products = [
-  {
-    url: '',
-    ename: 'light',
-    title: '長春市場的光'
-  },
-  {
-    url: '',
-    ename: 'light2',
-    title: '長春市場'
-  },
-  {
-    url: '',
-    ename: 'light3',
-    title: '市場的光'
-  },
-  {
-    url: '',
-    ename: 'light4',
-    title: '長春市場的光'
-  }
-]
 import SwiperOption from '@/utils/SwiperOption'
 
 export default {
   data () {
     return {
-      products,
       swiperOption: new SwiperOption()
+    }
+  },
+  computed: {
+    product () {
+      return this.$store.getters.getProductById(this.$route.params.id)
+    },
+    products () {
+      if (this.product) {
+        const products = this.$store.getters.getProductByCategory(this.product.category)
+        return products.filter(p => p.id !== this.product.id)
+      }
+      return []
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
+.swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+  @apply w-48 h-48 ;
+}
 
+.swiper-pb {
+  @apply pb-22;
+}
+
+/deep/ .swiper-pagination-bullet {
+  opacity: 1;
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  border: 1px solid black;
+  background-color: white;
+  margin: 0 12px !important;
+}
+
+/deep/ .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--swiper-pagination-color, var(--swiper-theme-color));
+    background-color: black;
+}
 </style>

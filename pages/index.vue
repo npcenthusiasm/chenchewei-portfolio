@@ -8,7 +8,7 @@
         subTitle="for Daily Utilities"
       />
       
-      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-3 md:grid-cols-3 gap-5">
+      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-3 md:grid-cols-3 gap-6 md:gap-5">
         <Product v-for="(p, i) in products.slice(0,9)" :key="i"
           :id="p.id"
           :title="p.title"
@@ -16,14 +16,16 @@
           :description="p.simple_desc"
         />
       </div>
-      <SeeMore to="/projects/product-design"/>
+      <div class="mx-7 lg:mx-0">
+        <SeeMore to="/projects/product-design"/>
+      </div>
     </div>
 
     <div class="container mx-auto px-7 md:px-0">
-      <hr class="mt-11 lg:mt-7 bg-customgray">
+      <hr class="mt-6 mb-19 md:mt-7 md:mb-30 bg-customgray">
     </div>
 
-    <div class="flex items-center justify-center mt-30 mb-23">
+    <div class="flex items-center justify-center mb-15 md:mb-23">
       <img loading="lazy" src="@/assets/img/square.svg" alt="arrow" class="w-2">
       <div class="mx-4 text-black-900 text-lg font-semibold">Sometimes I also do</div>
       <img loading="lazy" src="@/assets/img/square.svg" alt="arrow" class="w-2">
@@ -35,7 +37,7 @@
         subTitle="for Web & App"
       />
       
-      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1   md:grid-cols-3 gap-5">
+      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1   md:grid-cols-3 gap-6 md:gap-5">
         <Product v-for="(p, i) in interfaces.slice(0,3)" :key="i"
           :id="p.id"
           :title="p.title"
@@ -43,11 +45,15 @@
           :description="p.simple_desc"
         />
       </div>
-      <SeeMore to="/projects/interface-design"/>
+      <div class="mx-7 lg:mx-0">
+        <SeeMore to="/projects/interface-design"/>
+      </div>
     </div>
     
     <div class="container mx-auto px-7 md:px-0">
-      <hr class="my-11 lg:my-14 bg-customgray">
+      <!-- <hr class="my-11 lg:my-14 bg-customgray"> -->
+      <hr class="mt-6 mb-15 md:mt-7 md:mb-30 bg-customgray">
+
     </div>
 
     <div class="container mx-auto mb-7">
@@ -55,7 +61,7 @@
         title="Logo Design"
         subTitle="for Web & App"
       />
-      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1   md:grid-cols-3 gap-5">
+      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1 md:grid-cols-3 gap-6 md:gap-5">
         <Product v-for="(p, i) in logos.slice(0,3)" :key="i"
           :id="p.id"
           :title="p.title"
@@ -63,7 +69,9 @@
           :description="p.simple_desc"
         />
       </div>
-      <SeeMore to="/projects/logo-design"/>
+      <div class="mx-7 lg:mx-0">
+        <SeeMore to="/projects/logo-design"/>
+      </div>
     </div>
   </div>
 </template>
