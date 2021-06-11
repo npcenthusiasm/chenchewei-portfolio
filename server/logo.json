@@ -1,0 +1,79 @@
+[{
+  "category": "logo",
+  "title": "Switch Taipei",
+  "img": "",
+  "position": "1000",
+  "simple_desc": "",
+  "device": "",
+  "date": "",
+  "items": []
+}, {
+  "category": "logo",
+  "title": "cremove",
+  "img": "https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/logo%2Fcremove.jpeg?alt=media&token=7730654a-85a0-48ef-afe1-2e6d4ba1b985",
+  "position": "2000",
+  "simple_desc": "",
+  "device": "",
+  "date": "2021",
+  "items": [{
+    "tag": "1",
+    "workers": ["18"]
+  }, {
+    "tag": "5",
+    "workers": ["5", "32"]
+  }]
+}, {
+  "category": "logo",
+  "title": "minds",
+  "img": "https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/logo%2Fminds.jpeg?alt=media&token=3f6c4ad9-a8f8-4f32-add2-4bee1dd7188a",
+  "position": "3000",
+  "simple_desc": "",
+  "device": "",
+  "date": "2020",
+  "items": [{
+    "tag": "1",
+    "workers": ["19"]
+  }, {
+    "tag": "5",
+    "workers": ["5"]
+  }]
+}, {
+  "category": "logo",
+  "title": "Li Jin",
+  "img": "https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/logo%2FLi%20Jin.jpeg?alt=media&token=86a1574c-7881-469c-9c75-a5a5ae0dbc6d",
+  "position": "4000",
+  "simple_desc": "",
+  "device": "",
+  "date": "",
+  "items": []
+}, {
+  "category": "logo",
+  "title": "simple cocoon",
+  "img": "https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/logo%2Fsimple%20cocoon.jpeg?alt=media&token=2de6f342-ab38-4f82-9e9a-5f0c8c061c13",
+  "position": "5000",
+  "simple_desc": "",
+  "device": "",
+  "date": "2018",
+  "items": [{
+    "tag": "1",
+    "workers": ["1"]
+  }, {
+    "tag": "5",
+    "workers": ["5"]
+  }]
+}, {
+  "category": "logo",
+  "title": "sparo's",
+  "img": "https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/logo%2Fsparo_s.jpeg?alt=media&token=cd9cf407-0a1a-456b-aa41-458705e1f035",
+  "position": "6000",
+  "simple_desc": "",
+  "device": "",
+  "date": "2018",
+  "items": [{
+    "tag": "1",
+    "workers": ["50"]
+  }, {
+    "tag": "5",
+    "workers": ["5"]
+  }]
+}]

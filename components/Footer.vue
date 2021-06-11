@@ -1,7 +1,7 @@
 <template>
   <div style="background-color:#f5f5f5">
-    <div class="container mx-auto py-11">
-      <div class="flex flex-col md:flex-row mx-7 md:mx-0">
+    <div class="container mx-auto pt-11 pb-4 px-7">
+      <div class="flex flex-col md:flex-row md:mx-0 mb-23 md:mb-0">
         <ul class="w-full md:w-2/12 mb-11 md:mb-0">
           <div class="mb-5 font-semibold">follow</div>
           <li class="text-sm text-black-900 mb-2">Facebook</li>
@@ -12,6 +12,9 @@
           <div class="mb-5 font-semibold">contact</div>
           <li class="text-sm text-black-900">chewei.smile@gmail.com</li>
         </ul>
+      </div>
+      <div class="flex md:justify-end">
+        <p class="text-xs text-black-300">Copyright © www.chenchewei.com All Rights Reserved.</p>
       </div>
     </div>
   </div>

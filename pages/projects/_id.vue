@@ -7,7 +7,7 @@
       <div class="mb-5 md:mb-15">
         <div class="bg-no-repeat bg-cover bg-center"
           style="padding-bottom:64.2%; background-color:#f5f5f5"
-          :style="`background-image:url(${product.detail_main_img})`"></div>
+          :style="`background-image:url(${product.detail_main_img.img})`"></div>
       </div>
 
       <h2 class="mb-4 text-1xl lg:text-2xl text-black-900">{{ product.title }}</h2>
@@ -15,7 +15,7 @@
       <div class="flex flex-col md:flex-row md:flex-wrap">
 
         <div class="order-1 w-auto mb-6 md:w-7/12 md:mb-15">
-          <div class="w-auto lg:w-7/12">
+          <div class="">
             <p class="text-sm mb-8 mb-3 md:mb-5">{{ product.en_desc }}</p>
             <p class="text-sm tracking-widest">{{ product.cn_desc }}</p>
           </div>
