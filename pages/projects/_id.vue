@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-7 md:py-0 max-w-screen-lgs">
+  <div class="container mx-auto px-7 md:py-0 md:px-0 max-w-screen-lgs">
     <!-- 96 -->
     <!-- (1290 - 1090) / 2 = 95 -->
     
@@ -62,7 +62,7 @@
             class="swiper-slide"
             :to="{ name: 'projects-id', params: { id: p.id }}">
             <div class="bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:68.5%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
-            <h3 class="text-sm font-medium md:text-sm">{{ p.title }}</h3>
+            <h3 class="text-sm md:text-sm">{{ p.title }}</h3>
           </nuxt-link>
         </div>
         <div class="swiper-pagination"></div>
@@ -73,6 +73,7 @@
 
 <script>
 import SwiperOption from '@/utils/SwiperOption'
+import { getSwiperProducts } from '@/utils/getSwiperProducts'
 
 const swpOpt = new SwiperOption()
 const customOpt = {
@@ -126,8 +127,11 @@ export default {
     },
     products () {
       if (this.product) {
-        const products = this.$store.getters.getProductByCategory(this.product.category)
-        return products.filter(p => p.id !== this.product.id)
+        let products = this.$store.getters.getProductByCategory(this.product.category)
+        products.sort((a, b) => a.position > b.position ? 1 : -1)
+        const ps = getSwiperProducts(products, this.product.id)
+        return ps
+        // return products.filter(p => p.id !== this.product.id)
       }
       return []
     }
@@ -147,14 +151,15 @@ export default {
 /deep/ .swiper-pagination-bullet {
   opacity: 1;
   background: var(--swiper-pagination-color, var(--swiper-theme-color));
-  border: 1px solid black;
-  background-color: white;
+  /* border: 1px solid black; */
+  background-color: black;
   margin: 0 12px !important;
 }
 
 /deep/ .swiper-pagination-bullet-active {
-    opacity: 1;
-    background: var(--swiper-pagination-color, var(--swiper-theme-color));
-    background-color: black;
+  opacity: 1;
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  background-color: white;
+  border: 1px solid black;
 }
 </style>
