@@ -8,42 +8,48 @@
         <div class="w-4/12">
           <nuxt-link class="text-lg text-gray-900 tracking-wide font-medium" to="/" @click.native="close">CHEWEI</nuxt-link>
         </div>
-        <div class="hidden lg:flex">
-          <ul class="flex">
-            <li class="nav-link">
-              <!-- <div class="py-4 mr-19">Projects</div> -->
-              <nuxt-link class="py-4 mr-19" to="/projects/product-design" @click.native="close">Projects</nuxt-link>
-
-              <!-- <div class="mt-4 border-2 pt-0 flex absolute z-0 opacity-0 transform -translate-y-6  h-0 bg-grey-200
-                group-hover:h-20 group-hover:opacity-100 transition duration-200
-                group-hover:pt-8
-                group-hover:z-10
-              ">
-              </div> -->
-              <div class="nav-child">
-                <ul class="nav-links-child">
-                  <li class="nav-link-child"><nuxt-link class="py-4 mr-19 whitespace-nowrap" to="/projects/product-design">Product Design</nuxt-link></li>
-                  <li class="nav-link-child"><nuxt-link class="py-4 mr-19 whitespace-nowrap" to="/projects/interface-design">Interface Design</nuxt-link></li>
-                  <li class="nav-link-child"><nuxt-link class="py-4 mr-19 whitespace-nowrap" to="/projects/logo-design">Logo Design</nuxt-link></li>
-                </ul>
-              </div>
-              <!-- <div class="fixed max-h-0 h-full  top-16 w-full left-0 right-0 transition-all duration-200 opacity-0 bg-shonwhite
-                group-hover:opacity-100 group-hover:max-h-20"></div> -->
-            </li>
-            <li class="nav-link">
-              <nuxt-link class="py-4 mr-19" to="/about" @click.native="close">About</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link class="py-4 mr-19" to="/services" @click.native="close">Services</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link class="py-4 mr-19" to="/contact" @click.native="close">Contact</nuxt-link>
-            </li>
-          </ul>
-        </div>
-        <div class="hidden lg:flex">
-          <nuxt-link class="mr-19" to="/try" @click.native="close">Try</nuxt-link>
-          <nuxt-link to="/read" @click.native="close">Read</nuxt-link>
+        <div class="hidden w-8/12 lg:flex">
+          <div class="w-1/2 flex justify-start">
+            <ul class="flex">
+              <li class="nav-link">
+                <nuxt-link class="text-base py-4 mr-19" to="/projects/product-design" @click.native="close">Projects</nuxt-link>
+                <div class="nav-child">
+                  <ul class="nav-links-child">
+                    <li class="nav-link-child">
+                      <nuxt-link class="text-sm mr-10 whitespace-nowrap" to="/projects/product-design">Product Design</nuxt-link>
+                    </li>
+                    <li class="nav-link-child">
+                      <nuxt-link class="text-sm mr-10 whitespace-nowrap" to="/projects/interface-design">Interface Design</nuxt-link>
+                    </li>
+                    <li class="nav-link-child">
+                      <nuxt-link class="text-sm mr-10 whitespace-nowrap" to="/projects/logo-design">Logo Design</nuxt-link>
+                    </li>
+                  </ul>
+                </div>
+                <!-- <div class="fixed max-h-0 h-full  top-16 w-full left-0 right-0 transition-all duration-200 opacity-0 bg-shonwhite
+                  group-hover:opacity-100 group-hover:max-h-20"></div> -->
+              </li>
+              <li class="nav-link">
+                <nuxt-link class="text-base py-4 mr-19" to="/about" @click.native="close">About</nuxt-link>
+              </li>
+              <li class="nav-link">
+                <nuxt-link class="text-base py-4 mr-19" to="/services" @click.native="close">Services</nuxt-link>
+              </li>
+              <li class="nav-link">
+                <nuxt-link class="text-base py-4 mr-19" to="/contact" @click.native="close">Contact</nuxt-link>
+              </li>
+            </ul>
+          </div>
+          <div class="w-1/2 flex justify-end">
+            <ul class="flex">
+              <li class="nav-link">
+                <nuxt-link class="text-base py-4 mr-19" to="/try" @click.native="close">Try</nuxt-link>
+              </li>
+              <li class="nav-link">
+                <nuxt-link class="text-base py-4" to="/read" @click.native="close">Read</nuxt-link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="flex lg:hidden">
           <Burger
@@ -66,8 +72,11 @@
             <li class="mt-3 py-2">
               <nuxt-link class="ml-14 text-lg text-black-900 whitespace-nowrap block" to="/projects/product-design" @click.native="close">Product Design</nuxt-link>
             </li>
-            <li class="py-2"><nuxt-link class="ml-14 text-lg text-black-900 whitespace-nowrap block" to="/projects/interface-design" @click.native="close">Interface Design</nuxt-link></li>
-            <li class="py-2"><nuxt-link class="ml-14 text-lg text-black-900 whitespace-nowrap block" to="/projects/logo" @click.native="close">Logo</nuxt-link></li>
+            <li class="py-2">
+              <nuxt-link class="ml-14 text-lg text-black-900 whitespace-nowrap block" to="/projects/interface-design" @click.native="close">Interface Design</nuxt-link></li>
+            <li class="py-2">
+              <nuxt-link class="ml-14 text-lg text-black-900 whitespace-nowrap block" to="/projects/logo" @click.native="close">Logo</nuxt-link>
+            </li>
           </ul>
         </div>
         <nuxt-link class="ml-10 mb-17 py-2 text-2xl" to="/about" @click.native="close">About</nuxt-link>
@@ -134,57 +143,57 @@ import  ArrowUp from '@/components/icon/ArrowUp'
   @apply bg-white w-full h-full left-0 right-0 container mx-auto;
 }
 
-/* .open a {
-  display: block;
-  text-align: center;
-  width: 100%;
-  padding: 20px 0;
-} */
-
 .nav-link {
+  /* border: 1px solid red; */
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .nav-child {
   position: absolute;
-  /* top: 20px; */
-  /* border: 2px solid black; */
-  /* z-index: 2; */
+  /* border: 1px solid red; */
   opacity: 0;
+  width: 520px;
   padding-top: 5px;
-  /* pointer-events: none; */
+  padding-bottom: 20px;
+  font-size:16px;
   transition-property: opacity transform height;
   transition-duration: .5s;
   transition-timing-function: cubic-bezier(.215,.61,.355,1);
   transform: translateY(-20px);
-  width: 400px;
-  /* height: 100%; */
 }
 
 .nav-links-child {
   width: 100%;
 }
 
-li a {
-  /* height: 60px; */
+.nav-link:hover {
+  color: rgba(26, 26, 26, 0.5);
 }
+
 .nav-link:hover >.nav-child {
-  /* top: 60px; */
   display: block;
   transform: translateY(0px);
   opacity: 1;
-  /* z-index: 2; */
+  z-index: 1;
+}
+
+.nav-link:hover >.nav-child .nav-link-child {
+  display: block;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-link-child {
+  padding: 4px 0;
 }
 
 .nav-links-child {
   float: left;
-  /* margin: 0 0 0 13px; */
-  width: 530px;
 }
 
 .nav-link-child {
+  display: none;
   float: left;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 </style>
