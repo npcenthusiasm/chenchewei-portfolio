@@ -1,5 +1,5 @@
 class SwiperOption {
-  constructor () {
+  constructor ({ breakpoints } = {}) {
     this.slidesPerView = 2
     this.spaceBetween = 8
     this.slidesPerGroup = 2
@@ -14,7 +14,7 @@ class SwiperOption {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    this.breakpoints = {
+    this.breakpoints = breakpoints || {
       768: {
         slidesPerView: 4,
         slidesPerGroup: 4,

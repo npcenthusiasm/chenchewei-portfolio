@@ -18,7 +18,7 @@
             class="swiper-slide"
             :to="{ name: 'try-id', params: { id: p.id }}">
             <div class="bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
-            <h3 class="text-sm font-medium">{{ p.cn_title }}</h3>
+            <h3 class="text-sm">{{ p.cn_title }}</h3>
           </nuxt-link>
         </div>
         <div class="swiper-pagination"></div>
@@ -29,11 +29,18 @@
 
 <script>
 import SwiperOption from '@/utils/SwiperOption'
+const breakpoints  = {
+  768: {
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    spaceBetween: 20
+  }
+}
 
 export default {
   data () {
     return {
-      swiperOption: new SwiperOption()
+      swiperOption: new SwiperOption({ breakpoints })
     }
   },
   computed: {
@@ -63,14 +70,14 @@ export default {
 /deep/ .swiper-pagination-bullet {
   opacity: 1;
   background: var(--swiper-pagination-color, var(--swiper-theme-color));
-  border: 1px solid black;
-  background-color: white;
+  background-color: black;
   margin: 0 12px !important;
 }
 
 /deep/ .swiper-pagination-bullet-active {
-    opacity: 1;
-    background: var(--swiper-pagination-color, var(--swiper-theme-color));
-    background-color: black;
+  opacity: 1;
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  background-color: white;
+  border: 1px solid black;
 }
 </style>

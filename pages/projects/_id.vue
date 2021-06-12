@@ -75,18 +75,13 @@
 import SwiperOption from '@/utils/SwiperOption'
 import { getSwiperProducts } from '@/utils/getSwiperProducts'
 
-const swpOpt = new SwiperOption()
-const customOpt = {
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 20
-    }
+const breakpoints = {
+  768: {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 20
   }
-}
-
-Object.assign(swpOpt, customOpt)
+} 
 
 export default {
   head () {
@@ -109,7 +104,7 @@ export default {
     return {
       title: '陳哲瑋 - 作品集',
       description: '陳哲瑋，台灣產品設計師。負責產品定位、使用體驗、外觀設計、內容規劃的工作。',
-      swiperOption: swpOpt
+      swiperOption: new SwiperOption({ breakpoints })
     }
   },
   watch: {
@@ -151,7 +146,6 @@ export default {
 /deep/ .swiper-pagination-bullet {
   opacity: 1;
   background: var(--swiper-pagination-color, var(--swiper-theme-color));
-  /* border: 1px solid black; */
   background-color: black;
   margin: 0 12px !important;
 }
