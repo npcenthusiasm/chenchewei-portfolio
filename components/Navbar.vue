@@ -1,8 +1,11 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <div class="" :class="open ? 'fixed bg-white top-0 left-0 right-0' : ''" style="background-color:#fcfcfc">
+  <div
+    :class="open ? 'fixed w-full h-full top-0' : ''"
+    :style="open ? 'background-color:#ffffff' : 'background-color:#fcfcfc'">
+  <!-- <div class="" :class="open ? 'fixed bg-white top-0 left-0 right-0' : ''" style="background-color:#fcfcfc"> -->
+
     <div class="container mx-auto px-7 lg:px-0">
-       <!-- mb-12 -->
       
       <nav class="text-base h-21 flex justify-between items-center">
         <div class="w-4/12">
@@ -58,36 +61,7 @@
         </div>
       </nav>
     </div>
-
-    <div id="mobile-nav" class="fixed lg:hidden" style="top:84px"  :class="open ? 'block' : 'hidden'">
-      
-      <div class="flex flex-col lg:flex-row">
-        <div class="nav-li relative group mb-17" :class="showNav1 ? 'active' : ''">
-          <div class="px-10 text-2xl flex items-center" to="/product-design" @click="toggleNav">
-            <div class="title py-2">Projects</div>
-            <ArrowUp class="ml-4 text-gray-900 w-7 h-7 inline-block transform" :class="showNav1 ? 'rotate-0 text-black-500' : 'rotate-180'" />
-          </div>
-
-          <ul class="flex flex-col lg:flex-row" :class="showNav1 ? 'block' : 'hidden'">
-            <li class="mt-3 py-2">
-              <nuxt-link class="ml-14 text-lg text-black-900 whitespace-nowrap block" to="/projects/product-design" @click.native="close">Product Design</nuxt-link>
-            </li>
-            <li class="py-2">
-              <nuxt-link class="ml-14 text-lg text-black-900 whitespace-nowrap block" to="/projects/interface-design" @click.native="close">Interface Design</nuxt-link></li>
-            <li class="py-2">
-              <nuxt-link class="ml-14 text-lg text-black-900 whitespace-nowrap block" to="/projects/logo" @click.native="close">Logo</nuxt-link>
-            </li>
-          </ul>
-        </div>
-        <nuxt-link class="ml-10 mb-17 py-2 text-2xl" to="/about" @click.native="close">About</nuxt-link>
-        <nuxt-link class="ml-10 mb-17 py-2 text-2xl" to="/services" @click.native="close">Services</nuxt-link>
-        <nuxt-link class="ml-10 mb-17 py-2 text-2xl" to="/contact" @click.native="close">Contact</nuxt-link>
-      </div>
-      <div class="flex flex-col lg:flex-row">
-        <nuxt-link class="ml-10 mb-17 py-2 text-2xl" to="/try" @click.native="close">Try</nuxt-link>
-        <nuxt-link class="ml-10 mb-17 py-2 text-2xl" to="/read" @click.native="close">Read</nuxt-link>
-      </div>
-    </div>
+    <MobileNavbar :show="open" @close="toggle"/>
   </div>
 
 </template>
