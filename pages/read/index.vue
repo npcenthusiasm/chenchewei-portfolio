@@ -16,7 +16,7 @@
         :to="{ name: 'read-id', params: { id: p.id }}">
         <div class="bg-no-repeat bg-cover bg-center mb-2 md:mb-3" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
 
-        <h3 class="text-sm tracking-widest font-medium mb-7 md:mb-0">{{ p.cn_title }}</h3>
+        <h3 class="text-sm tracking-widest mb-7 md:mb-0">{{ p.cn_title }}</h3>
       </nuxt-link>
     </div>
 

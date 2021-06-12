@@ -14,7 +14,7 @@
           <li class="mb-8">
             <nuxt-link class="ml-8 text-lg text-black-900 whitespace-nowrap block" to="/projects/interface-design" @click.native="close">Interface Design</nuxt-link></li>
           <li class="mb-8">
-            <nuxt-link class="ml-8 text-lg text-black-900 whitespace-nowrap block" to="/projects/logo" @click.native="close">Logo</nuxt-link>
+            <nuxt-link class="ml-8 text-lg text-black-900 whitespace-nowrap block" to="/projects/logo-design" @click.native="close">Logo</nuxt-link>
           </li>
         </ul>
       </div>
