@@ -5,7 +5,7 @@
     <div class="mx-7 md:mx-0 mt-12 md:mt-37 mb-25 md:mb-45">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12 mb-15 md:mb-0">
-        <div class="w-30 h-30" style="background-color:#f5f5f5"></div>
+        <div class="w-30 h-30" style="background-color:#dfe3eb"></div>
         <!-- <img src="" alt="" width="120" height="120" style="background-color:#f5f5f5"> -->
         </div>
         <div class="w-full md:w-8/12">
