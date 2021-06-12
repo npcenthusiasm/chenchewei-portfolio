@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 
-const productsJSON = require('../static/products.json')
+const productsJSON = require('./data-generator/dist/products.json')
 
 const tagsMap = require('./model/tagsMap')
 // console.log('tagsMap: ', tagsMap);
@@ -66,6 +66,8 @@ const data = logoData.map((product, index) => {
         data[key] = product[key] === 'y'
         break
       case 'id':
+        data[key] = parseInt(product[key])
+        break
       case 'category':
       case 'title':
       case 'img':
@@ -139,4 +141,4 @@ console.log('formate success !!');
 // console.log('data: ', data[0].items);
 // console.log('data: ', data[7].items);
 
-fs.writeFileSync(path.resolve(__dirname, `${CATEGORY}.json`), JSON.stringify(data))
+fs.writeFileSync(path.resolve(__dirname + '/data-generator/dist/', `${CATEGORY}.json`), JSON.stringify(data))

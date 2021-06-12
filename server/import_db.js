@@ -3,17 +3,18 @@ const db = require('./db')
 
 const firestore = db.firestore()
 
-const logo = require('./all.json')
+const jsonData = require('./data-generator/dist/all.json')
 
-logo.forEach(data => {
-  // writeUserData(data)
+jsonData.forEach(data => {
+  writeUserData(data)
 })
 
 async function writeUserData(data) {
   // Add a new document in collection "cities"
-  firestore.collection("testProducts").doc(data.id).set(data)
+  const id = data.id
+  firestore.collection("testProducts").doc(id + '').set(data)
     .then(() => {
-      console.log(`${data.id}: Document successfully written!`);
+      console.log(`${id}: Document successfully written!`);
     })
     .catch((error) => {
       console.error("Error writing document: ", error);
