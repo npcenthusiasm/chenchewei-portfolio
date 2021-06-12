@@ -20,7 +20,7 @@ workerMap.set('18', { ename: 'cremove', cname: '創動感' })
 workerMap.set('19', { ename: 'minds', cname: '邁得思' })
 workerMap.set('20', { ename: 'Flora Piano', cname: '寬域工作室' })
 
-workerMap.set('21', { ename: 'Li Jin', cname: '立津國際' })
+workerMap.set('21', { ename: 'Li Jin', cname: '立津國際開發' })
 workerMap.set('22', { ename: 'Above', cname: '逸志科技' })
 workerMap.set('23', { ename: 'Chihyi CC', cname: '林芷伊' })
 workerMap.set('24', { ename: 'Shan Yao', cname: '姚杉' })
@@ -65,5 +65,6 @@ workerMap.set('60', { ename: 'Aaron Yen', cname: '正淵' })
 
 workerMap.set('61', { ename: 'Yi-Chang Chen', cname: '陳奕璋' })
 workerMap.set('62', { ename: '（未知）', cname: '（未知）' }) // FIXME:
+workerMap.set('63', { ename: 'Switch Taipei', cname: 'Switch Taipei' })
 
 module.exports = workerMap
