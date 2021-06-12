@@ -40,11 +40,16 @@
         </div>
 
         <div class="order-3 w-full mb-17 md:order-4 md:mb-33">
-          <div
-            v-for="(imgData, index) in product.detail_imgs" :key="index"
-            class="bg-no-repeat bg-cover bg-center mb-4 last:mb-0"
-            style="padding-bottom:64.2%; background-color:#f5f5f5"
-            :style="`background-image:url(${imgData.img})`">
+          <div v-for="(imgData, index) in product.detail_imgs" :key="index"
+            class="last:mb-0"
+            :class="imgData.desc !== '' ? 'mb-6 mb:mb-8' : 'mb-4'">
+            <div
+              class="bg-no-repeat bg-cover bg-center"
+              style="padding-bottom:64.2%; background-color:#f5f5f5"
+              :style="`background-image:url(${imgData.img})`"
+              :class="imgData.desc !== '' ? 'mb-2 md:mb-3' : ''">
+            </div>
+            <p v-if="imgData.desc" class="text-sm tracking-widest">{{ imgData.desc }}</p>
           </div>
         </div>
       </div>
