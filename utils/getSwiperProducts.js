@@ -17,7 +17,7 @@ export function getSwiperProducts (a, id = 5) {
     products = pTemp.concat(remore)
   }
 
-  const sc = window.innerWidth < 768 ? 10 : 9
+  const sc = 10
   products = products.slice(0, sc)
   return products
 }
