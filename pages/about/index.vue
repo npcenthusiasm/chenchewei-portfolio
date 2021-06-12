@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto max-w-screen-lgs  mt-11">
-    <div class="mx-7 mb-8 md:mx-0 md:mb-12 h-52 md:h-96 bg-img" style="background-color:#f5f5f5"></div>
+    <div class="mx-7 mb-8 md:mx-0 md:mb-12 h-52 md:h-96 bg-img banner-cs" style="background-color:#f5f5f5"></div>
 
     <div class="mx-7 mb-15 md:mb-12 mt-0 md:mx-0">
       <div class="flex flex-col md:flex-row">
@@ -63,7 +63,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css" scoped>
 .bg-img {
   @apply bg-no-repeat bg-cover bg-center;
   background-image: url(https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/about%2Fabout%20-%20mobile.jpeg?alt=media&token=3e9a992b-91aa-4ffd-871c-ee2569e2d936);
@@ -75,4 +75,13 @@ export default {
   }
 }
 
+
+.banner-cs {
+  height: auto;
+}
+@media (min-width: 768px) {
+  .banner-cs {
+    height: 430px;
+  }
+}
 </style>

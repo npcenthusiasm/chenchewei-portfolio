@@ -1,9 +1,9 @@
 <template>
-  <div class="container mx-auto max-w-screen-lgs">
-    <div class="mx-7 mb-15 md:mb-12 md:mx-0 h-52 md:h-96 flex flex-col md:flex-row" style="background-color:#f5f5f5">
+  <div class="container mx-auto max-w-screen-lgs mt-11">
+    <div class="mx-7 mb-15 md:mb-12 md:mx-0 h-52 md:h-96 flex flex-col md:flex-row banner-cs" style="background-color:#f5f5f5;">
       <div class="w-full md:w-4/12">
         <div class="hidden md:flex w-full h-full justify-end items-center pr-3" style="background-color:#dceff7">
-          <p class="bg-text-vertical text-white text-sm">Every teeny-tiny drop builds up the connection.</p>
+          <p class="bg-text-vertical text-white text-xs">Every teeny-tiny drop builds up the connection.</p>
         </div>
       </div>
       <div class="w-full md:w-8/12">
@@ -159,5 +159,14 @@ export default {
 .bg-text-vertical {
   text-orientation: mixed;
   writing-mode: tb-rl;
+}
+
+.banner-cs {
+  height: auto;
+}
+@media (min-width: 768px) {
+  .banner-cs {
+    height: 430px;
+  }
 }
 </style>

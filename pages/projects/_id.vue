@@ -62,7 +62,7 @@
             class="swiper-slide"
             :to="{ name: 'projects-id', params: { id: p.id }}">
             <div class="bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:68.5%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
-            <h3 class="text-sm font-semibold md:text-sm">{{ p.title }}</h3>
+            <h3 class="text-sm font-medium md:text-sm">{{ p.title }}</h3>
           </nuxt-link>
         </div>
         <div class="swiper-pagination"></div>
