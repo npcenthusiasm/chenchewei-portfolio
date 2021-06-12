@@ -3,7 +3,7 @@ class SwiperOption {
     this.slidesPerView = 2
     this.spaceBetween = 30
     this.slidesPerGroup = 2
-    this.loop = true
+    this.loop = false
     this.loopFillGroupWithBlank = true
     this.pagination = {
       el: '.swiper-pagination',
