@@ -22,13 +22,13 @@
     </div>
 
     <div class="container mx-auto px-7 md:px-0">
-      <hr class="mt-6 mb-19 md:mt-7 md:mb-30 bg-customgray">
+      <hr class="mt-6 mb-21 md:mb-19 md:mt-7 md:mb-30 bg-customgray">
     </div>
 
-    <div class="flex items-center justify-center mb-15 md:mb-23">
-      <img loading="lazy" src="@/assets/img/square.svg" alt="arrow" class="w-2">
-      <div class="mx-4 text-black-900 text-lg font-semibold">Sometimes I also do</div>
-      <img loading="lazy" src="@/assets/img/square.svg" alt="arrow" class="w-2">
+    <div class="flex items-center justify-center mb-17 md:mb-23">
+      <img loading="lazy" src="@/assets/img/square.svg" alt="arrow" style="width: 7.6px">
+      <div class="mx-4 text-black-900 text-base md:text-lg font-semibold">Sometimes I also do</div>
+      <img loading="lazy" src="@/assets/img/square.svg" alt="arrow" style="width: 7.6px">
     </div>
 
     <div class="container mx-auto">
@@ -59,7 +59,7 @@
     <div class="container mx-auto mb-7">
       <CategoryTitle
         title="Logo Design"
-        subTitle="for Web & App"
+        subTitle=""
       />
       <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1 md:grid-cols-3 gap-6 md:gap-5">
         <Product v-for="(p, i) in logos.slice(0,3)" :key="i"

@@ -7,7 +7,10 @@
             <p class="text-sm inline md:block">Che-Wei Chen, a product designer based in Taiwan.</p>
             <p class="text-sm inline md:block">Expertise in product positioning and design.</p>
           </div>
-          <h1 class="text-sm md:text-sm tracking-widest">陳哲瑋，台灣產品設計師。從事產品規劃及設計。 </h1>
+          <div>
+            <h1 class="text-sm md:text-sm tracking-widest md:inline">陳哲瑋，台灣產品設計師。</h1>
+            <h2 class="text-sm md:text-sm tracking-widest md:inline">從事產品規劃及設計。</h2>
+          </div>
         </div>
       </div>
     </div>
