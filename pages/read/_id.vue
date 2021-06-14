@@ -11,20 +11,20 @@
     <hr class="mx-0 mt-12 mb-11 md:mt-33 md:mb-17  bg-customgray">
 
   <div class="mx-7 md:mx-0 mb-30" v-if="products.length > 0">
-      <div v-swiper="swiperOption" class="swiper-pb">
-        <!-- // TODO:  swiper distance -->
-        <div class="swiper-wrapper">
-          <nuxt-link v-for="(p, i) in products" :key="i"
-            class="swiper-slide"
-            :to="{ name: 'try-id', params: { id: p.id }}">
-            <div class="bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
-            <h3 class="text-sm">{{ p.cn_title }}</h3>
-          </nuxt-link>
+      <client-only>
+        <div v-swiper="swiperOption" class="swiper-pb">
+          <div class="swiper-wrapper">
+            <nuxt-link v-for="(p, i) in products" :key="i"
+              class="swiper-slide"
+              :to="{ name: 'try-id', params: { id: p.id }}">
+              <div class="bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
+              <h3 class="text-sm">{{ p.cn_title }}</h3>
+            </nuxt-link>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
+      </client-only>
     </div>
-
   </div>
 </template>
 
