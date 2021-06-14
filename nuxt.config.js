@@ -13,6 +13,10 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: process.env.DEPLOY_ENV === 'GH_PAGES' ? 'static' : 'server',
+  server: {     
+    port: 8000, // default: 3000     
+    host: '0.0.0.0', // default: localhost   
+  },
   ...routerBase,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -43,7 +47,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/VueAwesomeSwiper.js', ssr: false }
+    { src: '~/plugins/VueAwesomeSwiper.js', mode: 'client'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
