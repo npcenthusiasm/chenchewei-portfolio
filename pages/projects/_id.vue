@@ -101,9 +101,12 @@ export default {
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { 'http-equiv': 'X-UA-Compatible', content:'ie=edge' },
-        // { property: 'og:title', content: '陳哲瑋 - 作品集' },
-        { property: 'og:description', content: this.description },
-        // { property: 'og:image', content: 'todo' },
+        { hid: 'description', name: 'description', content: this.description },
+        { hid: 'og:title'  , property: 'og:title'  , content: this.title},
+        { hid: 'og:description' , property: 'og:description' , content: this.description},
+        { hid: 'og:url' , property: 'og:url' , content: this.url},
+        { hid: 'og:image' , property: 'og:image' , content: this.image},
+        { hid: 'og:type' , property: 'og:type' , content: 'website'},
         // { property: 'og:url', content: 'todo' },
         // { property: 'og:site_name', content: '甜點電商' },
         // { property: 'og:locale', content: 'zh_TW' }
@@ -114,16 +117,23 @@ export default {
     return {
       title: '陳哲瑋 - 作品集',
       description: '陳哲瑋，台灣產品設計師。負責產品定位、使用體驗、外觀設計、內容規劃的工作。',
+      image: '',
       swiperOption: new SwiperOption({ breakpoints })
     }
   },
   watch: {
-    product(p) {
-      // console.log('p: ', p)
-      if (p) {
-        this.title = `${p.title} | ${p.category}`
-        this.description = `${p.en_desc}, ${p.cn_desc}`
-      }
+    product: {
+      handler (p) {
+        // console.log('p: ', p)
+        if (p) {
+          this.title = `${p.title} | ${p.category} | CHEWEI`
+          this.description = `${p.en_desc}, ${p.cn_desc}`,
+          this.image = p.img
+          const domain = 'https://npcenthusiasm.github.io/Vue-Nuxt-example'
+          this.url = domain + this.$route.fullPath
+        }
+      },
+      immediate: true
     }
   },
   computed: {
