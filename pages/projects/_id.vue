@@ -10,14 +10,17 @@
           :style="`background-image:url(${product.detail_main_img.img})`"></div>
       </div>
 
-      <h2 class="mb-4 text-1xl lg:text-2xl text-black-900">{{ product.title }}</h2>
+      <div class="text-black-900 mb-6 md:mb-4 flex items-baseline flex-wrap md:flex-nowrap">
+        <h3 class="leading-none text-1xl md:text-2xl font-normal">{{ product.title }}</h3>
+        <p class="w-full mt-1 md:mt-0 text-sm md:w-auto md:ml-3" v-if="product.device">{{ product.device }}</p>
+      </div>
 
       <div class="flex flex-col md:flex-row md:flex-wrap">
 
         <div class="order-1 w-auto mb-6 md:w-7/12 md:mb-15">
           <div class="">
-            <p class="text-sm mb-8 mb-3 md:mb-5">{{ product.en_desc }}</p>
-            <p class="text-sm tracking-widest">{{ product.cn_desc }}</p>
+            <p class="text-sm mb-8 mb-3 md:mb-5" v-if="product.en_desc">{{ product.en_desc }}</p>
+            <p class="text-sm tracking-widest" v-if="product.cn_desc">{{ product.cn_desc }}</p>
           </div>
 
         </div>
