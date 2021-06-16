@@ -156,6 +156,10 @@ import  ArrowUp from '@/components/icon/ArrowUp'
   color: rgba(0, 0, 0, 0.9);
 }
 
+.nav-link:hover >.nav-child .nav-link-child:hover {
+  color: rgba(26, 26, 26, 0.5);
+}
+
 .nav-link-child {
   padding: 4px 0;
 }
