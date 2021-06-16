@@ -7,7 +7,7 @@
       <div class="mb-5 md:mb-15">
         <div class="bg-no-repeat bg-cover bg-center"
           style="padding-bottom:64.2%; background-color:#f5f5f5"
-          :style="`background-image:url(${product.detail_main_img.img})`"></div>
+          :style="`background-image:url(${product.detail_imgs[0].img})`"></div>
       </div>
 
       <div class="text-black-900 mb-6 md:mb-4 flex items-baseline flex-wrap md:flex-nowrap">
@@ -43,7 +43,7 @@
         </div>
 
         <div class="order-3 w-full mb-17 md:order-4 md:mb-33">
-          <div v-for="(imgData, index) in product.detail_imgs" :key="index"
+          <div v-for="(imgData, index) in product.detail_imgs.slice(1)" :key="index"
             class="last:mb-0"
             :class="imgData.desc !== '' ? 'mb-6 mb:mb-8' : 'mb-4'">
             <div

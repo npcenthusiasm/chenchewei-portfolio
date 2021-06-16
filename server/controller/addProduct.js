@@ -106,7 +106,7 @@ const getProducts = async (req, res, next) => {
           cn_title: doc.data().cn_title || '',
           position: doc.data().position || 0,
           detail_main_img: doc.data().detail_imgs[0] || {}, // 單一頁面最上面一張 img
-          detail_imgs: doc.data().detail_imgs.slice(1) || [],// 單一頁面其他張 img
+          detail_imgs: doc.data().detail_imgs || [],// 單一頁面其他張 img
           en_member_info: doc.data().items.map(it => new EnMember(it.tag, it.workers)),
           cn_member_info: doc.data().items.map(it => new CnMember(it.tag, it.workers))
         }
@@ -115,7 +115,8 @@ const getProducts = async (req, res, next) => {
 
       // product 1 2
       // interface 18 20 21 22 23
-      const noDisplay = ['1', '2', '18', '20', '21', '22', '23']
+      // read
+      const noDisplay = ['1', '2', '18', '20', '21', '22', '23', '33']
       p = p.filter(pro => noDisplay.indexOf(pro.id + '') === -1)
 
       // p.sort((a, b) => a.position > b.position ? 1 : -1)
