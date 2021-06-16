@@ -45,9 +45,10 @@
           :description="p.simple_desc"
         />
       </div>
-      <div class="mx-7 lg:mx-0">
+      <div class="h-10 md:h-15"></div>
+      <!-- <div class="mx-7 lg:mx-0">
         <SeeMore to="/projects/interface-design"/>
-      </div>
+      </div> -->
     </div>
     
     <div class="container mx-auto px-7 md:px-0">

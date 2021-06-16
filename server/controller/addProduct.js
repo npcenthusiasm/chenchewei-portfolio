@@ -113,9 +113,10 @@ const getProducts = async (req, res, next) => {
         p.push(product)
       })
 
-      p = p.filter(pro => {
-        return (pro.id + '' !== '1' && pro.id + '' !== '2')
-      })
+      // product 1 2
+      // interface 18 20 21 22 23
+      const noDisplay = ['1', '2', '18', '20', '21', '22', '23']
+      p = p.filter(pro => noDisplay.indexOf(pro.id + '') === -1)
 
       // p.sort((a, b) => a.position > b.position ? 1 : -1)
       // p = p.filter(product => product.active !== false)
