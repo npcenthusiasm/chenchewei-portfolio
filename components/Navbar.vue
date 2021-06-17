@@ -1,12 +1,11 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <!-- <div
+  <div
     :class="open ? 'fixed w-full h-full top-0' : ''"
-    :style="open ? 'background-color:#ffffff' : 'background-color:#fcfcfc'"> -->
-  <div>
+    :style="open ? 'background-color:#ffffff' : 'background-color:#fcfcfc'">
   <!-- <div class="" :class="open ? 'fixed bg-white top-0 left-0 right-0' : ''" style="background-color:#fcfcfc"> -->
 
-    <div class="container mx-auto px-7 lg:px-0 fixed w-full top-0 left-0 right-0" style="background-color:#fcfcfc">
+    <div class="container mx-auto px-7 lg:px-0">
       
       <nav class="text-base h-21 flex justify-between items-center">
         <div class="w-4/12">
@@ -63,7 +62,6 @@
       </nav>
     </div>
     <MobileNavbar :show="open" @close="toggle"/>
-    <div class="h-21"></div>
   </div>
 
 </template>
