@@ -17,6 +17,7 @@
           </div> -->
           <!-- style="padding-bottom:64.2%; background-color:#f5f5f5" -->
             <video
+            controlslist="nodownload"
             controls
             class="w-full"
             :class="imgData.desc !== '' ? 'mb-2 md:mb-3' : ''"

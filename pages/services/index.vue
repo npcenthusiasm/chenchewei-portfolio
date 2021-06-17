@@ -10,6 +10,7 @@
         <div class="h-full flex justify-center items-center">
           <video
             class="md:rounded-2xl w-80 h-55"
+            controlslist="nodownload"
             playsinline
             autoplay
             muted
