@@ -13,7 +13,7 @@
             <p class="mb-5 tracking-widest">1989 年出生於高雄，大學畢業於長庚工業設計系，之後在台北從事設計工作。</p>
             <p class="mb-5 md:mb-5 tracking-widest">工作前三年從事生活用品的設計，經歷了筆、衛浴廚具、腳踏車的產業。接著踏入介面設計的領域，參與了餐飲訂餐、嬰幼兒成長紀錄、房產趨勢分析服務等專案。之後回到生活用品的設計，也參與介面設計的專案。</p>
           </div>
-          <p>Che-Wei Chen, a product designer based in Taiwan. Born in 1989 in Kaohsiung, later on kicked off his designer life based in Taipei after finishing the study of industrial design in Chang Gung University. The design journey started with designing daily necessities and tools, including pen, household utilities, tools and bicycle. Few years in, he extended the profession into interface design, including user’s platforms such as online food order system, baby nursing log, and real estate analysis report, etc. He is now focusing on designing both daily necessities and interface design.</p>
+          <p>Chewei Chen, a product designer based in Taiwan. Born in 1989 in Kaohsiung, later on kicked off his designer life based in Taipei after finishing the study of industrial design in Chang Gung University. The design journey started with designing daily necessities and tools, including pen, household utilities, tools and bicycle. Few years in, he extended the profession into interface design, including user’s platforms such as online food order system, baby nursing log, and real estate analysis report, etc. He is now focusing on designing both daily necessities and interface design.</p>
         </div>
       </div>
     </div>

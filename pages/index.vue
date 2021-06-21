@@ -87,20 +87,6 @@ export default {
     CategoryTitle,
     SeeMore
   },
-  head: {
-    title: '陳哲瑋 - 作品集',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 'http-equiv': 'X-UA-Compatible', content:'ie=edge' },
-      { property: 'og:title', content: '陳哲瑋 - 作品集' },
-      { property: 'og:description', content: '陳哲瑋，台灣產品設計師。負責產品定位、使用體驗、外觀設計、內容規劃的工作。' },
-      // { property: 'og:image', content: 'todo' },
-      // { property: 'og:url', content: 'todo' },
-      { property: 'og:site_name', content: '陳哲瑋作品集' },
-      { property: 'og:locale', content: 'zh_TW' }
-    ],
-  },
   computed: {
     products () {
       const products = this.$store.getters.getProductByCategory('product')

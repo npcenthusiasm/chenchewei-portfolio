@@ -4,7 +4,7 @@
       <div class="flex flex-col h-full pb-20 lg:pb-15">
         <div class="w-auto md:w-5/12 mx-7 lg:mx-0  mt-auto">
           <div class="mb-4 md:mb-5">
-            <p class="text-sm inline md:block">Che-Wei Chen, a product designer based in Taiwan.</p>
+            <p class="text-sm inline md:block">Chewei Chen, a product designer based in Taiwan.</p>
             <p class="text-sm inline md:block">Expertise in product positioning and design.</p>
           </div>
           <div>

@@ -58,7 +58,7 @@
       <div class="flex flex-col md:flex-row">
         <div class="w-full mb-11 md:mb-0 md:w-4/12 pr-0 md:pr-22">
           <h3 class="text-2xl mb-3 md:text-lg font-normal">Friends</h3>
-          <p class="text-black-700 text-base md:text-sm">They are some of my dearest friends from different fields. Feel free to make contact with them and find out more about their expertises.</p>
+          <p class="text-black-700 text-base md:text-sm">They are some of my friends from different fields. Feel free to make contact with them and find out more about their expertises.</p>
         </div>
         <div class="w-full md:w-8/12 text-sm">
           <div v-for="f in friends" :key="f.name" class="mb-5 md:mb-4 last:mb-0">

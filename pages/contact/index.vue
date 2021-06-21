@@ -12,10 +12,18 @@
           <p class="text-xl mb-11 md:mb-9">chewei.smile@gmail.com</p>
           <hr class="mx-0 mb-10 md:mb-6 bg-customgray">
           <ul class="flex flex-wrap text-base md:text-sm">
-            <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">Facebook</li>
-            <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">Instagram</li>
-            <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">Behance</li>
-            <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">Medium</li>
+            <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">
+              <a href="https://www.facebook.com/dailychillchill" target="_blank">Facebook</a>
+            </li>
+            <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">
+              <a href="http://instagram.com/studio_chillchill" target="_blank">Instagram</a>
+            </li>
+            <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">
+              <a href="https://www.behance.net/chewei" target="_blank">Behance</a>
+            </li>
+            <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">
+              <a href="https://medium.com/@cheweichen" target="_blank">Medium</a>
+            </li>
           </ul>
         </div>
       </div>
