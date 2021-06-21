@@ -74,7 +74,7 @@
               <h3 class="text-sm md:text-sm">{{ p.title }}</h3>
             </nuxt-link>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination" v-if="products.length > 3"></div>
         </div>
       </client-only>
     </div>

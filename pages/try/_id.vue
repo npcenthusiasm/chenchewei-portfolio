@@ -24,6 +24,8 @@
             :src="imgData.img"></video>
           <p v-if="imgData.desc" class="text-sm tracking-widest">{{ imgData.desc }}</p>
         </div>
+        <p class="text-sm tracking-widest" v-if="product.music">music: {{ product.music }}</p>
+        <p class="text-sm tracking-widest" v-if="product.album">album: {{ product.album }}</p>
     </div>
 
     <hr class="mx-0 mt-12 mb-11 md:mt-33 md:mb-17  bg-customgray">
@@ -39,7 +41,7 @@
               <h3 class="text-sm">{{ p.cn_title }}</h3>
             </nuxt-link>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination" v-if="products.length > 3"></div>
         </div>
       </client-only>
     </div>
