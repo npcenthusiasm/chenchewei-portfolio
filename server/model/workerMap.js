@@ -66,5 +66,6 @@ workerMap.set('60', { ename: 'Aaron Yen', cname: '正淵' })
 workerMap.set('61', { ename: 'Yichang Chen', cname: '陳奕璋' })
 workerMap.set('62', { ename: '（未知）', cname: '（未知）' }) // FIXME:
 workerMap.set('63', { ename: 'Switch Taipei', cname: 'Switch Taipei' })
+workerMap.set('64', { ename: 'Jason Xu', cname: '許閎傑' })
 
 module.exports = workerMap
