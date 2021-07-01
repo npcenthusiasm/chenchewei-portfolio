@@ -68,6 +68,12 @@ const data = logoData.map((product, index) => {
       case 'id':
         data[key] = parseInt(product[key])
         break
+      case 'Try_Read_Desc':
+        // console.log(product[key]);
+        const REGEX_BR = new RegExp('\r\n|\r|\n', 'gi')
+        const htmlText = product[key].replace(REGEX_BR, '<br/>')
+        data[key] = htmlText
+        break
       case 'category':
       case 'title':
       case 'img':

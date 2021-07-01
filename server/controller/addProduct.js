@@ -144,6 +144,7 @@ const getProducts = async (req, res, next) => {
           position: doc.data().position || 0,
           detail_main_img: doc.data().detail_imgs[0] || {}, // 單一頁面最上面一張 img
           detail_imgs: doc.data().detail_imgs || [],// 單一頁面其他張 img
+          Try_Read_Desc: doc.data().Try_Read_Desc,
           en_member_info: doc.data().items.map(it => new EnMember(it.tag, it.workers)),
           cn_member_info: doc.data().items.map(it => new CnMember(it.tag, it.workers))
         }
