@@ -77,7 +77,7 @@ export default {
 
 
 .banner-cs {
-  height: auto;
+  height: 220px;
 }
 @media (min-width: 768px) {
   .banner-cs {

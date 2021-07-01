@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Banner class="mb-15 lg:mb-20"/>
+    <!-- <Banner class="mb-15 lg:mb-20"/> -->
 
-    <div class="container mx-auto">
+    <div class="container mx-auto mt-24 lg:mt-35">
       <CategoryTitle
         title="Product Design"
         subTitle="for Daily Utilities"
@@ -46,9 +46,9 @@
         />
       </div>
       <div class="h-10 md:h-15"></div>
-      <!-- <div class="mx-7 lg:mx-0">
+      <div class="mx-7 lg:mx-0">
         <SeeMore to="/projects/interface-design"/>
-      </div> -->
+      </div>
     </div>
     
     <div class="container mx-auto px-7 md:px-0">
