@@ -107,16 +107,13 @@ export default {
         { hid: 'og:url' , property: 'og:url' , content: this.url},
         { hid: 'og:image' , property: 'og:image' , content: this.image},
         { hid: 'og:type' , property: 'og:type' , content: 'website'},
-        // { property: 'og:url', content: 'todo' },
-        // { property: 'og:site_name', content: '甜點電商' },
-        // { property: 'og:locale', content: 'zh_TW' }
       ],
     }
   },
   data() {
     return {
-      title: '陳哲瑋 - 作品集',
-      description: '陳哲瑋，台灣產品設計師。負責產品定位、使用體驗、外觀設計、內容規劃的工作。',
+      title: '',
+      description: '',
       image: '',
       swiperOption: new SwiperOption({ breakpoints })
     }

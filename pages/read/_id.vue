@@ -1,10 +1,10 @@
 <template>
   <div class="container mx-auto max-w-screen-lgs">
   
-    <div class="mx-7 mt-11 md:mt-12 md:mx-auto" style="max-width: 600px">
-      <div class="mb-5 md:mb-6 last:mb-0" v-for="(item, index) in 2" :key="index">
-        <div class="bg-no-repeat bg-cover bg-center mb-2 md:mb-6" style="padding-bottom:66.666%; background-color:#f5f5f5" :style="`background-image:url()`"></div>
-        <p class="text-sm">敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。</p>
+    <div class="mx-7 mt-11 md:mt-12 md:mx-auto" v-if="product"  style="max-width: 600px">
+      <div class="mb-5 md:mb-6 last:mb-0">
+        <div class="bg-no-repeat bg-cover bg-center mb-2 md:mb-3" style="padding-bottom:66.666%; background-color:#f5f5f5" :style="`background-image:url(${product.detail_imgs[0].img})`"></div>
+        <p class="text-sm tracking-widest" v-html="product.Try_Read_Desc"></p>
       </div>
     </div>
 
@@ -39,10 +39,45 @@ const breakpoints  = {
 }
 
 export default {
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { 'http-equiv': 'X-UA-Compatible', content:'ie=edge' },
+        { hid: 'description', name: 'description', content: this.description },
+        { hid: 'og:title'  , property: 'og:title'  , content: this.title},
+        { hid: 'og:description' , property: 'og:description' , content: this.description},
+        { hid: 'og:url' , property: 'og:url' , content: this.url},
+        { hid: 'og:image' , property: 'og:image' , content: this.image},
+        { hid: 'og:type' , property: 'og:type' , content: 'website'},
+      ],
+    }
+  },
   data () {
     return {
-      // products,
+      title: '',
+      description: '',
+      image: '',
       swiperOption: new SwiperOption(breakpoints)
+    }
+  },
+  watch: {
+    product: {
+      handler (p) {
+        // console.log('p: ', p)
+        if (p) {
+          this.title = `${p.cn_title} | ${p.category} | CHEWEI`
+          const REGEX_BR = new RegExp('<br/>', 'gi')
+          const desc = p.Try_Read_Desc.replace(REGEX_BR, ' ')
+          this.description = `${desc}`,
+          this.image = p.img
+          const domain = 'https://npcenthusiasm.github.io/Vue-Nuxt-example'
+          this.url = domain + this.$route.fullPath
+        }
+      },
+      immediate: true
     }
   },
   computed: {

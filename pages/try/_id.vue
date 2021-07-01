@@ -20,6 +20,7 @@
             controlslist="nodownload"
             controls
             class="w-full"
+            :poster="product.previewImg" 
             :class="imgData.desc !== '' ? 'mb-2 md:mb-3' : ''"
             :src="imgData.img"></video>
           <p v-if="imgData.desc" class="text-sm tracking-widest">{{ imgData.desc }}</p>
@@ -59,9 +60,45 @@ const breakpoints  = {
 }
 
 export default {
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { 'http-equiv': 'X-UA-Compatible', content:'ie=edge' },
+        { hid: 'description', name: 'description', content: this.description },
+        { hid: 'og:title'  , property: 'og:title'  , content: this.title},
+        { hid: 'og:description' , property: 'og:description' , content: this.description},
+        { hid: 'og:url' , property: 'og:url' , content: this.url},
+        { hid: 'og:image' , property: 'og:image' , content: this.image},
+        { hid: 'og:type' , property: 'og:type' , content: 'website'},
+      ],
+    }
+  },
   data () {
     return {
+    title: '',
+      description: '',
+      image: '',
       swiperOption: new SwiperOption({ breakpoints })
+    }
+  },
+  watch: {
+    product: {
+      handler (p) {
+        // console.log('p: ', p)
+        if (p) {
+          this.title = `${p.cn_title} | ${p.category} | CHEWEI`
+          const REGEX_BR = new RegExp('<br/>', 'gi')
+          const desc = p.Try_Read_Desc.replace(REGEX_BR, ' ')
+          this.description = `${desc}`,
+          this.image = p.img
+          const domain = 'https://npcenthusiasm.github.io/Vue-Nuxt-example'
+          this.url = domain + this.$route.fullPath
+        }
+      },
+      immediate: true
     }
   },
   computed: {

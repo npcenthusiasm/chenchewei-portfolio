@@ -140,7 +140,7 @@ const friends = [
     },
   {
     pos: 'Illustrator',
-    name: 'Chihyi Lin',
+    name: 'Chihyi CC',
     link: 'https://chihyicc.com'
   },
   {
