@@ -76,7 +76,44 @@ class CnMember {
   }
 }
 
+const try30 = {
+  id: '30',
+  desc: '計程車的亮黃車身、人行道的灰紅地磚、紅綠燈的綠色燈殼，街道上還有什麼顏色呢？',
+  music: 'Sweet Sue, Just You - Single Version',
+  album: 'The Essential Ray Conniff',
+  previewImg: 'https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/try%2F01%20%E4%BF%A1%E7%BE%A9%E5%AE%89%E5%92%8C%E7%AB%99%2Fresize.jpeg?alt=media&token=8a11031f-1ee3-4173-bd40-c5f65a16b3a1'
+}
 
+const try31 = {
+  id: '31',
+  desc: '午後的陽光在長春市場大樓的曲面上形成一道道直線，像光的通道般。',
+  music: 'Lazy Mississippi Moon',
+  album: 'Oliver’s Twist',
+  previewImg: 'https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/try%2F02%20%E9%95%B7%E6%98%A5%E5%B8%82%E5%A0%B4%2Fresize.jpeg?alt=media&token=fbbebe74-cbb8-44f9-9531-867a00a023c2'
+}
+
+const try32 = {
+  id: '32',
+  desc: '台北市立體育館的屋頂像由弱漸強的聲音。',
+  music: 'You Took Advantage of Me',
+  album: 'Oscar Peterson & The Greatest Singers, Vol.9',
+  previewImg: 'https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/try%2F03%20%E5%8F%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E9%AB%94%E8%82%B2%E9%A4%A8%2Fresize.jpeg?alt=media&token=5c3052e8-da19-42b7-adba-f72874010c6e'
+}
+
+const try33 = {
+  id: '33',
+  desc: '清晨陽光下的窗戶、紗窗網、窗框。',
+  music: 'Sympathique',
+  album: 'En Français',
+  previewImg: 'https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/try%2F04%20%E6%B8%85%E6%99%A8%E7%9A%84%E7%AA%97%2Fresize.jpeg?alt=media&token=2d45d870-55c9-4697-9b72-20632cf995d4'
+}
+
+const tryMap = {
+  '30': try30,
+  '31': try31,
+  '32': try32,
+  '33': try33
+}
 const getProducts = async (req, res, next) => {
   // console.log('req: ', req)
 
@@ -110,13 +147,20 @@ const getProducts = async (req, res, next) => {
           en_member_info: doc.data().items.map(it => new EnMember(it.tag, it.workers)),
           cn_member_info: doc.data().items.map(it => new CnMember(it.tag, it.workers))
         }
+
+        if (tryMap[product.id]) {
+          product.detail_imgs[0].desc = tryMap[product.id].desc
+          product.music = tryMap[product.id].music
+          product.album = tryMap[product.id].album
+          product.previewImg = tryMap[product.id].previewImg
+        }
         p.push(product)
       })
 
       // product 1 2
       // interface 18 20 21 22 23
       // read
-      const noDisplay = ['1', '2', '18', '20', '21', '22', '23', '33']
+      const noDisplay = ['1', '2', '18', '20', '21', '22', '23']
       p = p.filter(pro => noDisplay.indexOf(pro.id + '') === -1)
 
       // p.sort((a, b) => a.position > b.position ? 1 : -1)
@@ -128,6 +172,7 @@ const getProducts = async (req, res, next) => {
     res.status(400).send(error.message)
   }
 }
+
 
 const getTags = async (req, res, next) => {
   const tags = []

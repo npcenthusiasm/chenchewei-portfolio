@@ -103,7 +103,7 @@ const data = logoData.map((product, index) => {
         }
 
         const workers = product[key].split('、').map(value => getWorker(value))
-        const tagId = getTag(key.toLowerCase())
+        const tagId = getTag(key)
       
         if (tagId !== null) {
           items.push({
