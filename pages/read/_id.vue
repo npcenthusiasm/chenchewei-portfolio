@@ -21,7 +21,7 @@
               <h3 class="text-sm">{{ p.cn_title }}</h3>
             </nuxt-link>
           </div>
-          <div class="swiper-pagination" v-if="products.length > 3"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </client-only>
     </div>

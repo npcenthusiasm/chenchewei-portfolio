@@ -25,10 +25,16 @@
       <hr class="mt-6 mb-21 md:mb-19 md:mt-7 md:mb-30 bg-customgray">
     </div>
 
-    <div class="flex items-center justify-center mb-17 md:mb-23">
-      <img loading="lazy" src="@/assets/img/square.svg" alt="arrow" style="width: 7.6px">
-      <div class="mx-4 text-black-900 text-base md:text-lg font-semibold">Sometimes I also do</div>
-      <img loading="lazy" src="@/assets/img/square.svg" alt="arrow" style="width: 7.6px">
+    <div class="flex items-center justify-center mx-7 lg:mx-0 mb-17 md:mb-23">
+      <!-- <img loading="lazy" src="@/assets/img/square.svg" alt="arrow" style="width: 7.6px"> -->
+      <div class="text-black-900 w-full md:text-center text-lg md:text-lg font-medium">
+        <div class="hidden md:block">When I am not working on products, I am working on...</div>
+        <div class="block md:hidden">
+          <div>When I am not working on products,</div>
+          <div>I am working on...</div>
+        </div>
+      </div>
+      <!-- <img loading="lazy" src="@/assets/img/square.svg" alt="arrow" style="width: 7.6px"> -->
     </div>
 
     <div class="container mx-auto">

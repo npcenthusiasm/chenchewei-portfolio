@@ -11,7 +11,7 @@
       </div>
 
       <div class="text-black-900 mb-6 md:mb-4 flex items-baseline flex-wrap md:flex-nowrap">
-        <h3 class="leading-none text-1xl md:text-2xl font-normal">{{ product.title }}</h3>
+        <h3 class="leading-none text-1xl md:text-xl font-normal">{{ product.title }}</h3>
         <p class="w-full mt-1 md:mt-0 text-sm md:w-auto md:ml-3" v-if="product.device">{{ product.device }}</p>
       </div>
 
@@ -74,7 +74,7 @@
               <h3 class="text-sm md:text-sm">{{ p.title }}</h3>
             </nuxt-link>
           </div>
-          <div class="swiper-pagination" v-if="products.length > 3"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </client-only>
     </div>

@@ -14,6 +14,7 @@
             playsinline
             autoplay
             muted
+            loop
             src="https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/about%2Fservice%20-%20mobile%2002.mp4?alt=media&token=2bb244d1-1736-4fb7-8a9c-845f6df05306"></video>
           </div>
       </div>
@@ -58,7 +59,7 @@
       <div class="flex flex-col md:flex-row">
         <div class="w-full mb-11 md:mb-0 md:w-4/12 pr-0 md:pr-22">
           <h3 class="text-2xl mb-3 md:text-lg font-normal">Friends</h3>
-          <p class="text-black-700 text-base md:text-sm">They are some of my friends from different fields. Feel free to make contact with them and find out more about their expertises.</p>
+          <p class="text-black-700 text-base md:text-sm">They are some of my trusted friends from different fields. Feel free to make contact with them and find out more about their expertises.</p>
         </div>
         <div class="w-full md:w-8/12 text-sm">
           <div v-for="f in friends" :key="f.name" class="mb-5 md:mb-4 last:mb-0">
@@ -129,18 +130,23 @@ const friends = [
   },
   {
     pos: 'Graphic Designer',
-    name: 'Wei-Cheng Liao',
+    name: 'Weicheng Liao',
     link: 'https://www.liaoweicheng.com/'
   },
   {
     pos: 'Graphic Designer',
-    name: 'Chi-Fan Chung',
+    name: 'Chifan Chung',
     link: 'https://chungchifan.com'
     },
   {
     pos: 'Illustrator',
-    name: 'Chih-Yi Lin',
+    name: 'Chihyi Lin',
     link: 'https://chihyicc.com'
+  },
+  {
+    pos: 'English Content Ｗriter',
+    name: 'Michelle Chu',
+    link: 'https://www.linkedin.com/in/michelleyhchu'
   }
 ]
 
