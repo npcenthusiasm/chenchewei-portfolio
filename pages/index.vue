@@ -8,7 +8,7 @@
         subTitle="for Daily Utilities"
       />
       
-      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-3 md:grid-cols-3 gap-6 md:gap-5">
+      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-3 md:grid-cols-3 gap-7 md:gap-5">
         <Product v-for="(p, i) in products.slice(0,9)" :key="i"
           :id="p.id"
           :title="p.title"
@@ -43,7 +43,7 @@
         subTitle="for Web & App"
       />
       
-      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1   md:grid-cols-3 gap-6 md:gap-5">
+      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1   md:grid-cols-3 gap-7 md:gap-5">
         <Product v-for="(p, i) in interfaces.slice(0,3)" :key="i"
           :id="p.id"
           :title="p.title"
@@ -68,7 +68,7 @@
         title="Logo Design"
         subTitle=""
       />
-      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1 md:grid-cols-3 gap-6 md:gap-5">
+      <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1 md:grid-cols-3 gap-7 md:gap-5">
         <Product v-for="(p, i) in logos.slice(0,3)" :key="i"
           :id="p.id"
           :title="p.title"

@@ -4,7 +4,7 @@
       class="inline-block text-black-900 text-sm">
       <div class="flex items-center">
         <span class="mr-2">see more</span>
-        <div class="w-4">
+        <div class="w-5">
           <img loading="lazy" src="@/assets/img/arrow.svg" alt="arrow">
         </div>
       </div>

@@ -1,10 +1,10 @@
 <template>
-  <div id="mobile-nav" class="fixed w-full h-full px-7" style="top:84px" v-show="show">
-    <div class="flex flex-col lg:flex-row mt-11">
-      <div class="nav-li relative group mb-17" :class="showNav1 ? 'active' : ''">
-        <div class="text-2xl flex items-center" to="/product-design" @click="toggleNav">
+  <div id="mobile-nav" class="fixed z-10 w-full h-full px-7" style="top:84px" v-show="show">
+    <div class="flex flex-col lg:flex-row mt-14">
+      <div class="nav-li relative group mb-14" :class="showNav1 ? 'active' : ''">
+        <div class="text-xl flex items-center" to="/product-design" @click="toggleNav">
           <div class="title">Projects</div>
-          <ArrowUp class="ml-4 text-gray-900 w-7 h-7 inline-block transform" :class="showNav1 ? 'rotate-0 text-black-500' : 'rotate-180'" />
+          <ArrowUp class="ml-3 text-gray-900 w-7 h-7 inline-block transform" :class="showNav1 ? 'rotate-0 text-black-500' : 'rotate-180'" />
         </div>
 
         <ul class="mt-10 flex flex-col lg:flex-row" :class="showNav1 ? 'block' : 'hidden'">
@@ -18,13 +18,13 @@
           </li>
         </ul>
       </div>
-      <nuxt-link class="mb-17 text-2xl" to="/about" @click.native="close">About</nuxt-link>
-      <nuxt-link class="mb-17 text-2xl" to="/services" @click.native="close">Services</nuxt-link>
-      <nuxt-link class="mb-17 text-2xl" to="/contact" @click.native="close">Contact</nuxt-link>
+      <nuxt-link class="mb-14 text-xl" to="/about" @click.native="close">About</nuxt-link>
+      <nuxt-link class="mb-14 text-xl" to="/services" @click.native="close">Services</nuxt-link>
+      <nuxt-link class="mb-14 text-xl" to="/contact" @click.native="close">Contact</nuxt-link>
     </div>
     <div class="flex flex-col lg:flex-row">
-      <nuxt-link class="mb-17 text-2xl" to="/try" @click.native="close">Try</nuxt-link>
-      <nuxt-link class="mb-17 text-2xl" to="/read" @click.native="close">Read</nuxt-link>
+      <nuxt-link class="mb-14 text-xl" to="/try" @click.native="close">Try</nuxt-link>
+      <nuxt-link class="mb-14 text-xl" to="/read" @click.native="close">Read</nuxt-link>
     </div>
   </div>
 </template>
@@ -57,6 +57,7 @@ import  ArrowUp from '@/components/icon/ArrowUp'
       close () {
         this.$emit('close')
         this.open = false
+        this.showNav1 = false
       }
     }
   }

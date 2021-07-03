@@ -23,7 +23,7 @@
     <div class="mx-7 mb-15 md:mb-12 lg:mx-0">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
-          <h3 class="text-2xl mb-10 md:text-lg font-normal">Services</h3>
+          <h3 class="text-xl mb-10 md:text-lg font-normal">Services</h3>
         </div>
         <div class="w-full md:w-8/12 text-sm">
           <p v-for="s in services" :key="s.title"
@@ -41,7 +41,7 @@
     <!-- <div class="mx-7 py-4 md:py-12">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
-          <h3 class="text-2xl mb-10 md:text-lg font-normal">Process</h3>
+          <h3 class="text-xl mb-10 md:text-lg font-normal">Process</h3>
         </div>
         <div class="w-full md:w-8/12">
           <div v-for="(item, i) in process" :key="item.id">
@@ -58,7 +58,7 @@
     <div class="mx-7 mb-15 md:mb-11 lg:mx-0">
       <div class="flex flex-col md:flex-row">
         <div class="w-full mb-11 md:mb-0 md:w-4/12 pr-0 md:pr-22">
-          <h3 class="text-2xl mb-3 md:text-lg font-normal">Friends</h3>
+          <h3 class="text-xl mb-3 md:text-lg font-normal">Friends</h3>
           <p class="text-black-700 text-base md:text-sm">They are some of my trusted friends from different fields. Feel free to make contact with them and find out more about their expertises.</p>
         </div>
         <div class="w-full md:w-8/12 text-sm">

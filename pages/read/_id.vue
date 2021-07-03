@@ -4,7 +4,7 @@
     <div class="mx-7 mt-11 md:mt-12 md:mx-auto" v-if="product"  style="max-width: 600px">
       <div class="mb-5 md:mb-6 last:mb-0">
         <div class="bg-no-repeat bg-cover bg-center mb-2 md:mb-3" style="padding-bottom:66.666%; background-color:#f5f5f5" :style="`background-image:url(${product.detail_imgs[0].img})`"></div>
-        <p class="text-sm tracking-widest" v-html="product.Try_Read_Desc"></p>
+        <p class="text-sm tracking-widest" style="line-height:1.8" v-html="product.Try_Read_Desc"></p>
       </div>
     </div>
 

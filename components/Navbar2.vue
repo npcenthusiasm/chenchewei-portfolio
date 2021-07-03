@@ -2,7 +2,7 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div>
     <nav class="text-lg h-21 px-7 md:px-20 flex justify-between items-center">
-      <nuxt-link class="text-gray-900 tracking-wide font-medium" to="/">CHEWEI</nuxt-link>
+      <nuxt-link class="text-gray-900 tracking-wide font-medium" to="/">CHEWEI123</nuxt-link>
       <div class="hidden  lg:flex">
         <div class="flex flex-col lg:flex-row">
           <div class="relative group">

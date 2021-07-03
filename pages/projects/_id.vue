@@ -11,7 +11,7 @@
       </div>
 
       <div class="text-black-900 mb-6 md:mb-4 flex items-baseline flex-wrap md:flex-nowrap">
-        <h3 class="leading-none text-1xl md:text-xl font-normal">{{ product.title }}</h3>
+        <h3 class="leading-none text-xl font-normal">{{ product.title }}</h3>
         <p class="w-full mt-1 md:mt-0 text-sm md:w-auto md:ml-3" v-if="product.device">{{ product.device }}</p>
       </div>
 
@@ -20,24 +20,24 @@
         <div class="order-1 w-auto mb-6 md:w-7/12 md:mb-15">
           <div class="">
             <p class="text-sm mb-8 mb-3 md:mb-5" v-if="product.en_desc">{{ product.en_desc }}</p>
-            <p class="text-sm tracking-widest" v-if="product.cn_desc">{{ product.cn_desc }}</p>
+            <p class="text-sm tracking-widest" style="line-height: 1.8;" v-if="product.cn_desc">{{ product.cn_desc }}</p>
           </div>
 
         </div>
         <div class="hidden md:block md:order-2 md:w-2/12"></div>
 
-        <div class="order-4 w-auto mb-12 md:order-3 md:w-3/12 text-xss">
-          <ul class="mb-8 md:mb-4">
+        <div class="order-4 w-auto mb-12 md:order-3 md:w-3/12">
+          <ul class="mb-8 md:mb-2 scale-font-area">
             <li class="mb-1 leading-none" v-for="(member, index) in product.en_member_info" :key="index">
-              <span class="text-xss capitalize text-black-500 mr-2">{{ member.key }}</span>
-              <span class="text-xss text-black-900 font-bold">{{ member.value.join(', ') }}</span>
+              <span class="text-xs capitalize text-black-500 mr-2">{{ member.key }}</span>
+              <span class="text-xs text-black-900 font-bold">{{ member.value.join(', ') }}</span>
             </li>
           </ul>
 
-          <ul class="">
+          <ul class="scale-font-area">
             <li class="mb-1 tracking-wider leading-none" v-for="(member, index) in product.cn_member_info" :key="index">
-              <span class="text-xss capitalize text-black-500 mr-2">{{ member.key }}</span>
-              <span class="text-xss text-black-900 font-bold">{{ member.value.join('、') }}</span>
+              <span class="text-xs capitalize text-black-500 mr-2">{{ member.key }}</span>
+              <span class="text-xs text-black-900 font-bold">{{ member.value.join('、') }}</span>
             </li>
           </ul>
         </div>
@@ -152,6 +152,19 @@ export default {
 </script>
 
 <style scoped>
+@media (min-width: 768px){
+  .scale-font-area {
+    font-size: 12px;
+    transform: scale(0.834);
+    transform-origin: left top;
+  }
+}
+
+.scale-font-left {
+  position: relative;
+  left: -4px;
+}
+
 .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
   @apply w-48 h-48 ;
 }

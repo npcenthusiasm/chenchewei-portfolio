@@ -23,11 +23,11 @@
     <div class="mx-7 mb-15 md:mx-0 md:mb-12">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
-        <h3 class="text-2xl mb-10 md:text-lg font-normal">Product Design</h3>
+        <h3 class="text-xl mb-10 md:text-lg font-normal">Product Design</h3>
 
         </div>
         <div class="w-full md:w-8/12">
-          <div class="hidden md:block md:mb-5">
+          <div class="mb-5">
             <p class="tracking-widest">喜歡透過黏土、紙張、保麗龍等方式製作草模，從實際量體感受並思考其使用性、觸感、比例，透過手去思考如何改善，而不僅僅是用眼睛判斷物品的好壞。希望產品被使用時，因為好用，而有了比圖片上更美的感受。</p>
           </div>
           <!-- <div class="block mb-8 md:hidden">
@@ -43,7 +43,7 @@
     <div class="mx-7 mb-12 md:mx-0">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
-          <h3 class="text-2xl mb-10 md:text-lg font-normal">Interface Design</h3>
+          <h3 class="text-xl mb-10 md:text-lg font-normal">Interface Design</h3>
 
         </div>
         <div class="w-full mb-8 md:w-8/12 md:mb-4">

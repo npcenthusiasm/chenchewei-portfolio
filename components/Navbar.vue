@@ -1,15 +1,18 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div
-    :class="open ? 'fixed w-full h-full top-0' : ''"
+    :class="open ? 'fixed w-full h-full top-0 z-10' : ''"
     :style="open ? 'background-color:#ffffff' : 'background-color:#fcfcfc'">
   <!-- <div class="" :class="open ? 'fixed bg-white top-0 left-0 right-0' : ''" style="background-color:#fcfcfc"> -->
 
     <div class="container mx-auto px-7 lg:px-0">
       
-      <nav class="text-base h-21 flex justify-between items-center">
+      <nav class="text-base w-full h-21 flex justify-between items-center">
         <div class="w-4/12">
-          <nuxt-link class="text-lg text-gray-900 tracking-wide font-medium" to="/" @click.native="close">CHEWEI</nuxt-link>
+          <nuxt-link class="text-lg text-gray-900 tracking-wide font-medium" to="/" style="letter-spacing: 0.8px;" @click.native="close">
+          <!-- CHEWEI -->
+            <img loading="lazy" src="@/assets/img/logo.svg" alt="logo" style="height:24px">
+          </nuxt-link>
         </div>
         <div class="hidden w-8/12 lg:flex">
           <div class="w-1/2 flex justify-start">
