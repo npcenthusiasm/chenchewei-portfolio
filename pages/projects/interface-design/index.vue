@@ -9,7 +9,7 @@
         :id="p.id"
         :title="p.title"
         :img="p.img"
-        :description="p.description"
+        :description="p.simple_desc"
       />
     </div>
   </div>
