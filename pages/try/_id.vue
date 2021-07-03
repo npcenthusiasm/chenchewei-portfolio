@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto max-w-screen-lgs" v-if="product">
+  <div class="container mx-auto lgs:max-w-screen-lgs" v-if="product">
   
     <div class="mx-7 mt-11 md:mt-12 md:mx-auto" style="max-width: 600px">
       <!-- <div class="mb-5 md:mb-6 last:mb-0" v-for="(item, index) in 2" :key="index">

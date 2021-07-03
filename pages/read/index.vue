@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto max-w-screen-lgs">
+  <div class="container mx-auto lgs:max-w-screen-lgs">
 
     <div class="mx-7 xl:mx-0 mt-18 mb-13 md:mt-35 md:mb-14">
       <div class="flex flex-col md:flex-row">

@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto max-w-screen-lgs">
+  <div class="container mx-auto lgs:max-w-screen-lgs">
   
     <div class="mx-7 mt-11 md:mt-12 md:mx-auto" v-if="product"  style="max-width: 600px">
       <div class="mb-5 md:mb-6 last:mb-0">

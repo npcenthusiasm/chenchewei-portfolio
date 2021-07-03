@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto max-w-screen-lgs">
+  <div class="container mx-auto lgs:max-w-screen-lgs">
     
     <!-- <div class="hidden md:block" style="height: 150px"></div> -->
     <div class="mx-7 xl:mx-0 mt-12 md:mt-37 mb-25 md:mb-45">

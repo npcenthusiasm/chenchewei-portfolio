@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-7 md:py-0 xl:px-0 max-w-screen-lgs">
+  <div class="container mx-auto px-7 md:py-0 xl:px-0 lgs:lgs:max-w-screen-lgs">
     <!-- 96 -->
     <!-- (1290 - 1090) / 2 = 95 -->
     

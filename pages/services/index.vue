@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto max-w-screen-lgs mt-11">
+  <div class="container mx-auto lgs:max-w-screen-lgs mt-11">
     <div class="mx-7 mb-15 md:mb-12 xl:mx-0 h-52 md:h-96 flex flex-col md:flex-row banner-cs" style="background-color:#f5f5f5;">
       <div class="w-full md:w-4/12">
         <div class="hidden md:flex w-full h-full justify-end items-center pr-3" style="background-color:#dceff7">

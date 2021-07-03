@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto max-w-screen-lgs  mt-11">
+  <div class="container mx-auto lgs:max-w-screen-lgs  mt-11">
     <div class="mx-7 mb-8 xl:mx-0 md:mb-12 h-52 md:h-96 bg-img banner-cs" style="background-color:#f5f5f5"></div>
 
     <div class="mx-7 mb-15 md:mb-12 mt-0 xl:mx-0">
