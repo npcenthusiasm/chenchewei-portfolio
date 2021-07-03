@@ -51,7 +51,7 @@
           :description="p.simple_desc"
         />
       </div>
-      <div class="h-10 md:h-15"></div>
+
       <div class="mx-7 xl:mx-0">
         <SeeMore to="/projects/interface-design"/>
       </div>
