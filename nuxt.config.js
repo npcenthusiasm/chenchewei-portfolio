@@ -4,6 +4,9 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {}
 
+function getPathLink (path) {
+  return process.env.DEPLOY_ENV === 'GH_PAGES' ? '/Vue-Nuxt-example/' + path : path
+}
 // const target = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 //   router: {
 //     base: '/Vue-Nuxt-example/'
@@ -31,7 +34,7 @@ export default {
       { hid: 'description', name: 'description', content: '陳哲瑋，台灣產品設計師。 從事產品規劃及設計。' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: getPathLink('/favicon.ico') }
     ]
   },
 

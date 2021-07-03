@@ -5,13 +5,13 @@
     :style="open ? 'background-color:#ffffff' : 'background-color:#fcfcfc'">
   <!-- <div class="" :class="open ? 'fixed bg-white top-0 left-0 right-0' : ''" style="background-color:#fcfcfc"> -->
 
-    <div class="container mx-auto px-7 xl:px-0">
+    <div class="mx-auto px-7" style="max-width: 1440px">
       
       <nav class="text-base w-full h-21 flex justify-between items-center">
         <div class="w-4/12">
           <nuxt-link class="text-lg text-gray-900 tracking-wide font-medium" to="/" style="letter-spacing: 0.8px;" @click.native="close">
           <!-- CHEWEI -->
-            <img loading="lazy" src="@/assets/img/logo.svg" alt="logo" style="height:24px">
+            <img loading="lazy" src="@/assets/img/logo.svg" alt="logo" style="height:22px">
           </nuxt-link>
         </div>
         <div class="hidden w-8/12 lg:flex">
