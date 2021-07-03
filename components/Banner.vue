@@ -2,7 +2,7 @@
   <div class="bg-no-repeat bg-cover bg-center" style="height: 430px; background-color:#f5f5f5" :style="`background-image:url(${''}})`">
     <div class="container mx-auto h-full">
       <div class="flex flex-col h-full pb-20 lg:pb-15">
-        <div class="w-auto md:w-5/12 mx-7 lg:mx-0  mt-auto">
+        <div class="w-auto md:w-5/12 mx-7 xl:mx-0  mt-auto">
           <div class="mb-4 md:mb-5">
             <p class="text-sm inline md:block">Chewei Chen, a product designer based in Taiwan.</p>
             <p class="text-sm inline md:block">Expertise in product positioning and design.</p>

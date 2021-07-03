@@ -5,7 +5,7 @@
     :style="open ? 'background-color:#ffffff' : 'background-color:#fcfcfc'">
   <!-- <div class="" :class="open ? 'fixed bg-white top-0 left-0 right-0' : ''" style="background-color:#fcfcfc"> -->
 
-    <div class="container mx-auto px-7 lg:px-0">
+    <div class="container mx-auto px-7 xl:px-0">
       
       <nav class="text-base w-full h-21 flex justify-between items-center">
         <div class="w-4/12">

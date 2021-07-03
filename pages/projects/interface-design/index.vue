@@ -4,7 +4,7 @@
         title="Interface Design"
         subTitle="for Web & App"
       />
-    <div class="mx-7 lg:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1 md:grid-cols-3 gap-7 mb-17">
+    <div class="mx-7 xl:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1 md:grid-cols-3 gap-7 mb-17">
       <Product v-for="(p, i) in interfaces" :key="i"
         :id="p.id"
         :title="p.title"

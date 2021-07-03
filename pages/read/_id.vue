@@ -10,7 +10,7 @@
 
     <hr class="mx-0 mt-12 mb-11 md:mt-33 md:mb-17  bg-customgray">
 
-  <div class="mx-7 md:mx-0 mb-30" v-if="products.length > 0">
+  <div class="mx-7 xl:mx-0 mb-30" v-if="products.length > 0">
       <client-only>
         <div v-swiper="swiperOption" class="swiper-pb">
           <div class="swiper-wrapper">

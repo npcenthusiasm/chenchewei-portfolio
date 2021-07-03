@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto max-w-screen-lgs mt-11">
-    <div class="mx-7 mb-15 md:mb-12 md:mx-0 h-52 md:h-96 flex flex-col md:flex-row banner-cs" style="background-color:#f5f5f5;">
+    <div class="mx-7 mb-15 md:mb-12 xl:mx-0 h-52 md:h-96 flex flex-col md:flex-row banner-cs" style="background-color:#f5f5f5;">
       <div class="w-full md:w-4/12">
         <div class="hidden md:flex w-full h-full justify-end items-center pr-3" style="background-color:#dceff7">
           <p class="bg-text-vertical text-white-900 text-xs">Every teeny-tiny drop builds up the connection.</p>
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="mx-7 mb-15 md:mb-12 lg:mx-0">
+    <div class="mx-7 mb-15 md:mb-12 xl:mx-0">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
           <h3 class="text-xl mb-10 md:text-lg font-normal">Services</h3>
@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <!-- <hr class="mx-7 my-11 md:mx-0 md:my-4 bg-customgray"> -->
+    <!-- <hr class="mx-7 my-11 xl:mx-0 md:my-4 bg-customgray"> -->
 
     <!-- <div class="mx-7 py-4 md:py-12">
       <div class="flex flex-col md:flex-row">
@@ -47,15 +47,15 @@
           <div v-for="(item, i) in process" :key="item.id">
             <p class="font-medium"><span class="mr-4 md:mr-5">0{{ item.id }}</span>{{ item.title }}</p>
             <p>{{ item.desc }}</p>
-            <hr v-if="process.length - 1 !== i" class="my-11 md:mx-0 md:my-10 bg-customgray">
+            <hr v-if="process.length - 1 !== i" class="my-11 xl:mx-0 md:my-10 bg-customgray">
           </div>
         </div>
       </div>
     </div> -->
 
-    <hr class="mx-7 mb-15 md:mb-12 lg:mx-0 bg-customgray">
+    <hr class="mx-7 mb-15 md:mb-12 xl:mx-0 bg-customgray">
 
-    <div class="mx-7 mb-15 md:mb-11 lg:mx-0">
+    <div class="mx-7 mb-15 md:mb-11 xl:mx-0">
       <div class="flex flex-col md:flex-row">
         <div class="w-full mb-11 md:mb-0 md:w-4/12 pr-0 md:pr-22">
           <h3 class="text-xl mb-3 md:text-lg font-normal">Friends</h3>

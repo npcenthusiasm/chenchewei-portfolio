@@ -1,8 +1,8 @@
 <template>
   <div class="container mx-auto max-w-screen-lgs  mt-11">
-    <div class="mx-7 mb-8 md:mx-0 md:mb-12 h-52 md:h-96 bg-img banner-cs" style="background-color:#f5f5f5"></div>
+    <div class="mx-7 mb-8 xl:mx-0 md:mb-12 h-52 md:h-96 bg-img banner-cs" style="background-color:#f5f5f5"></div>
 
-    <div class="mx-7 mb-15 md:mb-12 mt-0 md:mx-0">
+    <div class="mx-7 mb-15 md:mb-12 mt-0 xl:mx-0">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
           <img class="hidden md:block w-20 h-20" src="https://firebasestorage.googleapis.com/v0/b/profile-a4697.appspot.com/o/about%2Fabout_self_blue.png?alt=media&token=76e589c7-473e-415c-b9d7-4e7c7ae33cd2" alt="">
@@ -18,9 +18,9 @@
       </div>
     </div>
 
-    <hr class="mx-7 mb-15 md:mx-0 md:mb-12 bg-customgray">
+    <hr class="mx-7 mb-15 xl:mx-0 md:mb-12 bg-customgray">
 
-    <div class="mx-7 mb-15 md:mx-0 md:mb-12">
+    <div class="mx-7 mb-15 xl:mx-0 md:mb-12">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
         <h3 class="text-xl mb-10 md:text-lg font-normal">Product Design</h3>
@@ -38,9 +38,9 @@
       </div>
     </div>
 
-    <hr class="mx-7 mb-15 md:mx-0 md:mb-12 bg-customgray">
+    <hr class="mx-7 mb-15 xl:mx-0 md:mb-12 bg-customgray">
 
-    <div class="mx-7 mb-12 md:mx-0">
+    <div class="mx-7 mb-12 xl:mx-0">
       <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-4/12">
           <h3 class="text-xl mb-10 md:text-lg font-normal">Interface Design</h3>
