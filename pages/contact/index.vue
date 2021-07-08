@@ -13,16 +13,16 @@
           <hr class="mx-0 mb-10 md:mb-6 bg-customgray">
           <ul class="flex flex-wrap text-base md:text-sm">
             <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">
-              <a href="https://www.facebook.com/dailychillchill" target="_blank">Facebook</a>
+              <a class="link-hover" href="https://www.facebook.com/dailychillchill" target="_blank">Facebook</a>
             </li>
             <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">
-              <a href="http://instagram.com/studio_chillchill" target="_blank">Instagram</a>
+              <a class="link-hover" href="http://instagram.com/studio_chillchill" target="_blank">Instagram</a>
             </li>
             <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">
-              <a href="https://www.behance.net/chewei" target="_blank">Behance</a>
+              <a class="link-hover" href="https://www.behance.net/chewei" target="_blank">Behance</a>
             </li>
             <li class="mr-8 mb-6 md:mb-0 md:mr-10 last:mr-0 last:mb-0">
-              <a href="https://medium.com/@cheweichen" target="_blank">Medium</a>
+              <a class="link-hover" href="https://medium.com/@cheweichen" target="_blank">Medium</a>
             </li>
           </ul>
         </div>

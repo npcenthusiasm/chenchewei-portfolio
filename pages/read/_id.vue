@@ -17,7 +17,7 @@
             <nuxt-link v-for="(p, i) in products" :key="i"
               class="swiper-slide"
               :to="{ name: 'read-id', params: { id: p.id }}">
-              <div class="bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
+              <div class="product-hover bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:100%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
               <h3 class="text-sm">{{ p.cn_title }}</h3>
             </nuxt-link>
           </div>
@@ -73,7 +73,7 @@ export default {
           const desc = p.Try_Read_Desc.replace(REGEX_BR, ' ')
           this.description = `${desc}`,
           this.image = p.img
-          const domain = 'https://npcenthusiasm.github.io/Vue-Nuxt-example'
+          const domain = 'https://www.chenchewei.com'
           this.url = domain + this.$route.fullPath
         }
       },

@@ -64,7 +64,7 @@
         <div class="w-full md:w-8/12 text-sm">
           <div v-for="f in friends" :key="f.name" class="mb-5 md:mb-4 last:mb-0">
             <span class="text-black-700 mr-2">{{ f.pos }}</span>
-            <a :href="f.link" target="_blank" class="font-medium">{{ f.name }}</a>
+            <a :href="f.link" target="_blank" class="link-hover font-medium">{{ f.name }}</a>
           </div>
         </div>
       </div>

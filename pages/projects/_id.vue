@@ -70,7 +70,7 @@
             <nuxt-link v-for="(p, i) in products" :key="i"
               class="swiper-slide"
               :to="{ name: 'projects-id', params: { id: p.id }}">
-              <div class="bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:68.5%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
+              <div class="product-hover bg-no-repeat bg-cover bg-center mb-3" style="padding-bottom:68.5%; background-color:#f5f5f5" :style="`background-image:url(${p.img})`"></div>
               <h3 class="text-sm md:text-sm">{{ p.title }}</h3>
             </nuxt-link>
           </div>
@@ -126,7 +126,7 @@ export default {
           this.title = `${p.title} | ${p.category} | CHEWEI`
           this.description = `${p.en_desc}, ${p.cn_desc}`,
           this.image = p.img
-          const domain = 'https://npcenthusiasm.github.io/Vue-Nuxt-example'
+          const domain = 'https://www.chenchewei.com'
           this.url = domain + this.$route.fullPath
         }
       },

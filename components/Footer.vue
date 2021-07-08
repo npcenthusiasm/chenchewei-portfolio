@@ -6,13 +6,13 @@
         <ul class="w-full md:w-2/12 mb-11 md:mb-0">
           <div class="mb-5 text-sm font-medium">follow</div>
           <li class="text-sm text-black-900 mb-2">
-            <a href="https://www.facebook.com/dailychillchill" target="_blank">Facebook</a>
+            <a class="link-hover" href="https://www.facebook.com/dailychillchill" target="_blank">Facebook</a>
           </li>
           <li class="text-sm text-black-900 mb-2">
-            <a href="http://instagram.com/studio_chillchill" target="_blank">Instagram</a>
+            <a class="link-hover" href="http://instagram.com/studio_chillchill" target="_blank">Instagram</a>
           </li>
           <li class="text-sm text-black-900 mb-2">
-            <a href="https://www.behance.net/chewei" target="_blank">Behance</a>
+            <a class="link-hover" href="https://www.behance.net/chewei" target="_blank">Behance</a>
           </li>
         </ul>
         <ul class="w-full md:w-2/12">
