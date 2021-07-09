@@ -73,6 +73,11 @@ export default {
       'swiper' // 避免多次引入多次加载swiper资源文件
     ]
   },
+  generate: {
+    exclude: [
+      /^\/admin/ // path starts with /admin
+    ]
+  },
   // Defaults options
   tailwindcss: {
     cssPath: '~/assets/tailwind.css',
