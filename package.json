@@ -6,6 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "cp-cname": "cp CNAME dist/",
     "generate": "nuxt generate",
     "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
