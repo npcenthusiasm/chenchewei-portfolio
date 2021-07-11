@@ -47,7 +47,7 @@
 
         </div>
         <div class="w-full mb-8 md:w-8/12 md:mb-4">
-          <p class="tracking-widest">相較於畫面的設計，更喜歡參與內容的規劃，以及架構流程的安排，例如課程的內容、遊戲互動的方式、產品的分類、產品的層級關係。希望先滿足功能的使用面，再美化畫面。</p>
+          <p class="tracking-widest">相較於畫面的設計，更喜歡參與內容的規劃，以及使用流程的安排，例如產品的分類、產品的層級關係，希望先滿足功能的使用面，再美化畫面。</p>
           <div class="h-4"></div>
           <p>User experience is the priority. Instead of solely emphasize on the external design, we believe that only when the designer understands the purpose and meaning behind the product completely, that the design can be truly satisfied to the end users.</p>
         </div>
