@@ -27,12 +27,12 @@ module.exports = {
   host: HOST,
   url:  HOST_URL,
   firebaseConfig: {
-    apiKey: "AIzaSyDG_SHZ15DHlMguJThOqw88RD98wXeeNPY",
-    authDomain: "profile-a4697.firebaseapp.com",
-    projectId: "profile-a4697",
-    storageBucket: "profile-a4697.appspot.com",
-    messagingSenderId: "146058574535",
-    appId: "1:146058574535:web:0f3073d89b03ea5f059ce2",
-    measurementId: "G-1SKZ5G9XV7"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
   }
 }
