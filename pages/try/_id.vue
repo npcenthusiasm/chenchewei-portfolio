@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto lgs:max-w-screen-lgs" v-if="product">
+  <div class="container lgs:max-w-screen-lgs" v-if="product">
   
-    <div class="mx-7 mt-11 md:mt-12 md:mx-auto" style="max-width: 600px">
+    <div class="mt-11 md:mt-12 mx-auto" style="max-width: 600px">
       <!-- <div class="mb-5 md:mb-6 last:mb-0" v-for="(item, index) in 2" :key="index">
         <div class="bg-no-repeat bg-cover bg-center mb-2 md:mb-6" style="padding-bottom:66.666%; background-color:#f5f5f5" :style="`background-image:url()`"></div>
         <p class="text-sm">敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述敘述。</p>
@@ -29,9 +29,9 @@
         <p class="text-sm tracking-widest" v-if="product.album">album: {{ product.album }}</p>
     </div>
 
-    <hr class="mx-0 mt-12 mb-11 md:mt-33 md:mb-17  bg-customgray">
+    <hr class="mt-12 mb-11 md:mt-33 md:mb-17  bg-customgray">
 
-    <div class="mx-7 xl:mx-0 mb-30" v-if="products.length > 0">
+    <div class=" mb-30" v-if="products.length > 0">
       <client-only>
         <div v-swiper="swiperOption" class="swiper-pb">
           <div class="swiper-wrapper">

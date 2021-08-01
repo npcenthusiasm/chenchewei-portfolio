@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container">
 
     <button class="py-2 px-6 bg-red-400" @click="fetchSomething">fetchSomething</button>
     <button class="py-2 px-6 bg-red-400" @click="fetchTags">fetchTags</button>

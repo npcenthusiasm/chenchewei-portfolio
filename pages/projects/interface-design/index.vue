@@ -1,10 +1,10 @@
 <template>
-  <div class="container mx-auto mt-24 lg:mt-35">
+  <div class="container mt-24 lg:mt-35">
     <CategoryTitle
         title="Interface Design"
         subTitle="for Web & App"
       />
-    <div class="mx-7 xl:mx-0 grid grid-rows-1 grid-cols-1 md:grid-rows-1 md:grid-cols-3 gap-7 md:gap-5 mb-17">
+    <div class=" grid grid-rows-1 grid-cols-1 md:grid-rows-1 md:grid-cols-3 gap-7 md:gap-5 mb-17">
       <Product v-for="(p, i) in interfaces" :key="i"
         :id="p.id"
         :title="p.title"

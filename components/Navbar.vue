@@ -5,7 +5,7 @@
     :style="open ? 'background-color:#ffffff' : 'background-color:#fcfcfc'">
   <!-- <div class="" :class="open ? 'fixed bg-white top-0 left-0 right-0' : ''" style="background-color:#fcfcfc"> -->
 
-    <div class="container mx-auto px-7 xl:px-0" >
+    <div class="container " >
       <!-- style="max-width: 1440px" -->
       
       <nav class="text-base w-full h-21 flex justify-between items-center">
@@ -118,7 +118,7 @@ import  ArrowUp from '@/components/icon/ArrowUp'
 }
 
 #mobile-nav {
-  @apply bg-white w-full h-full left-0 right-0 container mx-auto;
+  @apply bg-white w-full h-full left-0 right-0 container;
 }
 
 .nav-link {

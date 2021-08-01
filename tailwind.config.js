@@ -13,6 +13,19 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    container: {
+      center: true,
+      // screens: {
+      //   sm: '584px',
+      //   md: '712px',
+      //   lg: '968px',
+      //   xl: '1224px',
+      //   '2xl': '1336px'
+      // },
+      padding: {
+        DEFAULT: '28px'
+      }
+    },
     screens: {
       'sm': '640px',
       'md': '768px',

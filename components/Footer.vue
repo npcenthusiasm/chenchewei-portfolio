@@ -1,8 +1,8 @@
 <template>
   <div style="background-color:#f5f5f5;">
-    <div class="container mx-auto pt-11 pb-4 px-7 xl:px-0" >
+    <div class="container pt-11 pb-4" >
       <!-- style=" max-width: 1440px" -->
-      <div class="flex flex-col md:flex-row xl:mx-0 mb-23 md:mb-0">
+      <div class="flex flex-col md:flex-row mb-23 md:mb-0">
         <ul class="w-full md:w-2/12 mb-11 md:mb-0">
           <div class="mb-5 text-sm font-medium">follow</div>
           <li class="text-sm text-black-900 mb-2">

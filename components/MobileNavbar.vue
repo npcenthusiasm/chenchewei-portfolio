@@ -84,7 +84,7 @@ import  ArrowUp from '@/components/icon/ArrowUp'
 }
 
 #mobile-nav {
-  @apply bg-white w-full h-full left-0 right-0 container mx-auto;
+  @apply bg-white w-full h-full left-0 right-0 container;
 }
 
 .nav-link {
