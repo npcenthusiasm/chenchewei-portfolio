@@ -11,6 +11,7 @@
     "generate": "nuxt generate",
     "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+    "generate:gh-pages-my": "npm run generate:gh-pages && npm run cp-cname && npm run cp-sitemap",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
