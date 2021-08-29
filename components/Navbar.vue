@@ -63,7 +63,7 @@
         </nav>
       </div>
     </div>
-    <div class="lg:block" style="height:84px"></div>
+    <div class="hidden lg:block" style="height:84px"></div>
 <!-- 
     <div class="flex lg:hidden mobile-nav" :class="{'open-mob-menu': open}">
       <div class="container">
