@@ -159,7 +159,7 @@ import throttle from 'lodash.throttle'
   left: 0;
   right: 0;
   background-color:#fcfcfc;
-  transition: transform .3s ease-in-out;
+  transition: transform .5s ease-in-out;
   transform: translateY(0);
   z-index: 1000;
 }
