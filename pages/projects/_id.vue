@@ -141,7 +141,7 @@ export default {
       if (this.product) {
         let products = this.$store.getters.getProductByCategory(this.product.category)
         // 濾掉 id: '16'
-        products = products.filter(it => it.id !== '16')
+        // products = products.filter(it => it.id !== '16')
 
         products.sort((a, b) => a.position > b.position ? 1 : -1)
         const ps = getSwiperProducts(products, this.product.id)
