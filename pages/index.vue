@@ -79,6 +79,16 @@
           :description="p.simple_desc"
         />
       </div>
+      <!-- 為了 generator 出 projects/16 的頁面-->
+        <Product
+          class="hidden"
+          v-if="product16"
+          :id="product16.id"
+          :title="product16.title"
+          :img="product16.img"
+          :description="product16.simple_desc"
+        />
+
       <div class="">
         <SeeMore to="/projects/logo-design"/>
       </div>
@@ -97,6 +107,12 @@ export default {
     SeeMore
   },
   computed: {
+    product16 () {
+      let interface2 = this.$store.getters.getProductByCategory('interface')
+      let item = interface2.find(it => it.id === '16')
+
+      return item
+    },
     products () {
       const products = this.$store.getters.getProductByCategory('product')
       products.sort((a, b) => a.position > b.position ? 1 : -1)
