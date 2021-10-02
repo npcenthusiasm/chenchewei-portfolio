@@ -139,15 +139,21 @@ export default {
     },
     products () {
       if (this.product) {
-        let products = this.$store.getters.getProductByCategory(this.product.category)
-        // 濾掉 id: '16'
-        // products = products.filter(it => it.id !== '16')
 
-        products.sort((a, b) => a.position > b.position ? 1 : -1)
-        const ps = getSwiperProducts(products, this.product.id)
-        return ps
-        // return products.filter(p => p.id !== this.product.id)
+        if (this.product && this.product.id === '16') {
+          return [
+            this.$store.getters.getProductById('17'),
+            this.$store.getters.getProductById('19')
+          ]
+        } else {
+          let products = this.$store.getters.getProductByCategory(this.product.category)
+          const k = products.filter(it => it.id !== '16')
+          const ps = getSwiperProducts(k, this.product.id)
+
+          return ps
+        }
       }
+      
       return []
     }
   }

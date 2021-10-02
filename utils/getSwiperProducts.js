@@ -4,7 +4,12 @@
 
 export function getSwiperProducts (a, id = 5) {
   let products = a.slice()
-  const index = products.findIndex(pro => pro.id === id)
+  
+  let index = products.findIndex(pro => pro.id === id)
+  // console.log('index: ', index);
+  if (index === -1) {
+    index = 0
+  }
   // const index = 0
   const isFirst = index === 0
   const isLast = index === products.length -1
