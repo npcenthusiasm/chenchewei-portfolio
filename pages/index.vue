@@ -80,14 +80,14 @@
         />
       </div>
       <!-- 為了 generator 出 projects/16 的頁面-->
-          <!-- class="hidden" -->
-        <!-- <Product
+        <Product
+          class="hidden"
           v-if="product16"
           :id="product16.id"
           :title="product16.title"
           :img="product16.img"
           :description="product16.simple_desc"
-        /> -->
+        />
 
       <div class="">
         <SeeMore to="/projects/logo-design"/>
