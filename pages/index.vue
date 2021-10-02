@@ -106,7 +106,10 @@ export default {
     interfaces () {
       const products = this.$store.getters.getProductByCategory('interface')
       products.sort((a, b) => a.position > b.position ? 1 : -1)
-      const items = products.filter(product => product.show)
+      let items = products.filter(product => product.show)
+      // 濾掉 id: '16'
+      items = items.filter(it => it.id !== '16')
+
       return items
     },
     logos () {

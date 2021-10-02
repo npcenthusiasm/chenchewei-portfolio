@@ -24,8 +24,11 @@ export default {
   },
   computed: {
     interfaces () {
-      const interfaces = this.$store.getters.getProductByCategory('interface')
+      let interfaces = this.$store.getters.getProductByCategory('interface')
+      // 濾掉 id: '16'
+      interfaces = interfaces.filter(it => it.id !== '16')
       interfaces.sort((a, b) => a.position > b.position ? 1 : -1)
+
       return interfaces
     }
   }
