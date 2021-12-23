@@ -4,9 +4,10 @@
 
 export function getSwiperProducts (a, id = 5) {
   let products = a.slice()
-  
-  let index = products.findIndex(pro => pro.id === id)
-  // console.log('index: ', index);
+
+  // 已排過順序
+  const index = products.findIndex(pro => pro.id === id)
+
   if (index === -1) {
     index = 0
   }

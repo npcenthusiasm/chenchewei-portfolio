@@ -64,6 +64,8 @@
 
 <script>
 import SwiperOption from '@/utils/SwiperOption'
+import { getSwiperProducts } from '@/utils/getSwiperProducts'
+
 const breakpoints  = {
   768: {
     slidesPerView: 4,
@@ -120,8 +122,11 @@ export default {
     },
     products () {
       if (this.product) {
-        const products = this.$store.getters.getProductByCategory(this.product.category)
-        return products.filter(p => p.id !== this.product.id)
+        let products = this.$store.getters.getProductByCategory(this.product.category)
+        // 注意 read 跟 try 是 list_sort
+        products.sort((a, b) => a.list_sort > b.list_sort ? 1 : -1)
+        const ps = getSwiperProducts(products, this.product.id)
+        return ps
       }
       return []
     }

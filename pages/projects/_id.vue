@@ -147,8 +147,10 @@ export default {
           ]
         } else {
           let products = this.$store.getters.getProductByCategory(this.product.category)
-          const k = products.filter(it => it.id !== '16')
-          const ps = getSwiperProducts(k, this.product.id)
+          products.sort((a, b) => a.page_sort > b.page_sort ? 1 : -1)
+
+          products = products.filter(it => it.id !== '16')
+          const ps = getSwiperProducts(products, this.product.id)
 
           return ps
         }
