@@ -115,13 +115,13 @@ export default {
     },
     products () {
       const products = this.$store.getters.getProductByCategory('product')
-      products.sort((a, b) => a.position > b.position ? 1 : -1)
+      products.sort((a, b) => a.list_sort > b.list_sort ? 1 : -1)
       const items = products.filter(product => product.show)
       return items
     },
     interfaces () {
       const products = this.$store.getters.getProductByCategory('interface')
-      products.sort((a, b) => a.position > b.position ? 1 : -1)
+      products.sort((a, b) => a.list_sort > b.list_sort ? 1 : -1)
       let items = products.filter(product => product.show)
       // 濾掉 id: '16'
       items = items.filter(it => it.id !== '16')
@@ -130,7 +130,7 @@ export default {
     },
     logos () {
       const products = this.$store.getters.getProductByCategory('logo')
-      products.sort((a, b) => a.position > b.position ? 1 : -1)
+      products.sort((a, b) => a.list_sort > b.list_sort ? 1 : -1)
       const items = products.filter(product => product.show)
       return items
     },

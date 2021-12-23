@@ -16,14 +16,27 @@
             :class="imgData.desc !== '' ? 'mb-2 md:mb-3' : ''">
           </div> -->
           <!-- style="padding-bottom:64.2%; background-color:#f5f5f5" -->
+          <template v-if="imgData.type === 'video'">
             <video
-            controlslist="nodownload"
-            controls
-            class="w-full"
-            :poster="product.previewImg" 
-            :class="imgData.desc !== '' ? 'mb-2 md:mb-3' : ''"
-            :src="imgData.img"></video>
-          <p v-if="imgData.desc" class="text-sm tracking-widest">{{ imgData.desc }}</p>
+              controlslist="nodownload"
+              controls
+              class="w-full"
+              :poster="product.previewImg" 
+              :class="imgData.desc !== '' ? 'mb-2 md:mb-3' : ''"
+              :src="imgData.img"></video>
+          </template>
+
+          <template v-else>
+      
+            <div
+              class="bg-no-repeat bg-cover bg-center"
+              style="padding-bottom:64.2%; background-color:#f5f5f5"
+              :style="`background-image:url(${imgData.img})`"
+              :class="imgData.desc !== '' ? 'mb-2 md:mb-3' : ''">
+            </div>
+          </template>
+          
+          <p v-if="imgData.desc" v-html="imgData.desc" class="text-sm tracking-widest"></p>
         </div>
         <p class="text-sm tracking-widest" v-if="product.music">music: {{ product.music }}</p>
         <p class="text-sm tracking-widest" v-if="product.album">album: {{ product.album }}</p>
@@ -91,7 +104,7 @@ export default {
         if (p) {
           this.title = `${p.cn_title} | ${p.category} | CHEWEI`
           const REGEX_BR = new RegExp('<br/>', 'gi')
-          const desc = p.Try_Read_Desc.replace(REGEX_BR, ' ')
+          const desc = p.detail_imgs[0].desc.replace(REGEX_BR, ' ')
           this.description = `${desc}`,
           this.image = p.img
           const domain = 'https://www.chenchewei.com'

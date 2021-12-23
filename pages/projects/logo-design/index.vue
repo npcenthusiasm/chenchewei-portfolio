@@ -26,7 +26,7 @@ export default {
   computed: {
     logos () {
       const logos = this.$store.getters.getProductByCategory('logo')
-      logos.sort((a, b) => a.position > b.position ? 1 : -1)
+      logos.sort((a, b) => a.page_sort > b.page_sort ? 1 : -1)
       return logos
     }
   }

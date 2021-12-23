@@ -67,5 +67,13 @@ workerMap.set('61', { ename: 'Yichang Chen', cname: '陳奕璋' })
 workerMap.set('62', { ename: '（未知）', cname: '（未知）' }) // FIXME:
 workerMap.set('63', { ename: 'Switch Taipei', cname: 'Switch Taipei' })
 workerMap.set('64', { ename: 'Jason Xu', cname: '許閎傑' })
+workerMap.set('65', { ename: 'TopNotch', cname: '得蒙奇科技' })
+workerMap.set('66', { ename: 'Sound Decision Inc.', cname: '尚鼎益全球科技股份有限公司' })
+workerMap.set('67', { ename: 'sunnyrush', cname: '藺子' })
+workerMap.set('68', { ename: 'TDRI', cname: '台灣設計研究院' })
+workerMap.set('69', { ename: 'iNSIGHT', cname: '台大智活' })
+workerMap.set('70', { ename: 'Ken Huang', cname: '黃紹祖' })
 
+workerMap.set('71', { ename: 'Aaron Yen', cname: '顏正淵' })
+workerMap.set('72', { ename: 'Bin Kuo', cname: '郭斌' })
 module.exports = workerMap

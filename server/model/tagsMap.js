@@ -17,5 +17,8 @@ tagsMap.set('15', { ename: 'Print', cname: '印刷'})
 tagsMap.set('16', { ename: 'Planning', cname: '企劃'})
 tagsMap.set('17', { ename: 'Model', cname: '模特兒'})
 tagsMap.set('18', { ename: 'Cooperation', cname: '合作'})
+tagsMap.set('19', { ename: 'Craftsmanship', cname: '工藝'})
+tagsMap.set('20', { ename: 'Plan', cname: '策劃單位'})
+tagsMap.set('21', { ename: 'Research', cname: '研究單位'})
 
 module.exports = tagsMap

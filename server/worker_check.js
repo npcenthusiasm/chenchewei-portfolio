@@ -12,6 +12,7 @@ workerJson.forEach(it => {
 
 })
 
+let count = 0
 function findWorker(cname, ename) {
 
   for (const [key, value] of workerMap) {
@@ -23,5 +24,6 @@ function findWorker(cname, ename) {
     }
   }
 
-  console.log(cname, ename, 'need update !!')
+  // console.log(cname, ename, 'need update !!')
+  console.log(`workerMap.set('??', { ename: '${ename}', cname: '${cname}' })`)
 }

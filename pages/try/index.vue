@@ -33,7 +33,7 @@ export default {
   computed: {
     items () {
       const items = this.$store.getters.getProductByCategory('try')
-      items.sort((a, b) => a.position > b.position ? 1 : -1)
+      items.sort((a, b) => a.list_sort > b.list_sort ? 1 : -1)
 
       return items
     }

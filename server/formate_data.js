@@ -26,6 +26,19 @@ function getWorker(cname) {
   console.log(`not found: ${cname}`)
 }
 
+
+function getMediaType(url) {
+
+  if (url.match('.mp4')) {
+    return 'video'
+  }
+
+  // if (match === 'gif') {
+  //   return 'img'
+  // }
+  return 'img'
+}
+
 // const interfaceData = productsJSON.filter(p => p.category === 'interface')
 const CATEGORY = 'all'
 const logoData = productsJSON.filter(p => p.id !== '')
@@ -51,6 +64,19 @@ const data = logoData.map((product, index) => {
     } 
 
     if (DESC_REGEX.test(key)) {
+
+
+      if (product.category === 'try' || product.category === 'read') {
+        if (key === 'img_1_description' || key === 'img_2_description') {
+          console.log('key: ', key);
+          const REGEX_BR = new RegExp('\r\n|\r|\n', 'gi')
+          const htmlText = product[key].replace(REGEX_BR, '<br/>')
+          product[key] = htmlText
+          console.log('htmlText: ', htmlText);
+        }
+
+      }
+
       // 有圖片才給 desc
       const [, id,] = key.split('_')
       if (detail_imgs[id]) {
@@ -59,21 +85,25 @@ const data = logoData.map((product, index) => {
     } 
     
     switch (key) {
-      case 'position':
+      case 'page_sort':
         data[key] = parseInt(product[key])
         break
-      case 'show':
-        data[key] = product[key] === 'y'
+      case 'list_sort':
+        if (product[key] !== '') {
+          data[key] = parseInt(product[key])
+        }
+        
+        data['show'] = product[key] !== ''
         break
       case 'id':
         data[key] = parseInt(product[key])
         break
-      case 'Try_Read_Desc':
-        // console.log(product[key]);
-        const REGEX_BR = new RegExp('\r\n|\r|\n', 'gi')
-        const htmlText = product[key].replace(REGEX_BR, '<br/>')
-        data[key] = htmlText
-        break
+      // case 'Try_Read_Desc':
+      //   // console.log(product[key]);
+      //   const REGEX_BR = new RegExp('\r\n|\r|\n', 'gi')
+      //   const htmlText = product[key].replace(REGEX_BR, '<br/>')
+      //   data[key] = htmlText
+      //   break
       case 'category':
       case 'title':
       case 'img':
@@ -98,6 +128,10 @@ const data = logoData.map((product, index) => {
       case 'Programming':
       case 'Cooperation':
       case 'Date':
+      case 'Craftsmanship':
+      case 'Plan':
+      case 'Research':
+        
 
       // case 'Product manager':
       // case 'Product design':
@@ -126,11 +160,11 @@ const data = logoData.map((product, index) => {
     }
   })
 
-
   detail_imgs = Object.keys(detail_imgs).map(key => {
     return {
       img: detail_imgs[key].img,
       desc: detail_imgs[key].desc,
+      type: getMediaType(detail_imgs[key].img)
     }
   })
 

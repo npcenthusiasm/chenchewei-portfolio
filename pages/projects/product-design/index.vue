@@ -27,7 +27,7 @@ export default {
   computed: {
     products () {
       const products = this.$store.getters.getProductByCategory('product')
-      products.sort((a, b) => a.position > b.position ? 1 : -1)
+      products.sort((a, b) => a.page_sort > b.page_sort ? 1 : -1)
       return products
     }
   }

@@ -12,7 +12,7 @@ jsonData.forEach(data => {
 async function writeUserData(data) {
   // Add a new document in collection "cities"
   const id = data.id
-  firestore.collection("testProducts").doc(id + '').set(data)
+  firestore.collection("1221Products").doc(id + '').set(data)
     .then(() => {
       console.log(`${id}: Document successfully written!`);
     })

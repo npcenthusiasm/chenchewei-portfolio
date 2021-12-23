@@ -143,6 +143,11 @@ const friends = [
     name: 'Chihyi CC',
     link: 'https://chihyicc.com'
   },
+    {
+    pos: 'Web Developer',
+    name: 'Hungmi Tsai',
+    link: 'https://hungmi.github.io/resume/'
+  },
   {
     pos: 'English Content Ｗriter',
     name: 'Michelle Chu',

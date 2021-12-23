@@ -118,7 +118,7 @@ const getProducts = async (req, res, next) => {
   // console.log('req: ', req)
 
   try {
-    const products = await firestore.collection('testProducts')
+    const products = await firestore.collection('1221Products')
     // const products = await firestore.collection('products')
     // console.log('products: ', products);
     const data = await products.get()
@@ -141,7 +141,9 @@ const getProducts = async (req, res, next) => {
           simple_desc: doc.data().simple_desc,
           title: doc.data().title,
           cn_title: doc.data().cn_title || '',
-          position: doc.data().position || 0,
+          list_sort: doc.data().list_sort || 999,
+          page_sort: doc.data().page_sort || 999,
+          // position: doc.data().position || 0,
           detail_main_img: doc.data().detail_imgs[0] || {}, // 單一頁面最上面一張 img
           detail_imgs: doc.data().detail_imgs || [],// 單一頁面其他張 img
           Try_Read_Desc: doc.data().Try_Read_Desc,
@@ -158,10 +160,10 @@ const getProducts = async (req, res, next) => {
         p.push(product)
       })
 
-      // product 1 2
+      // product 2
       // interface 18 20 21 22 23
       // read
-      const noDisplay = ['1', '2', '18', '20', '21', '22', '23']
+      const noDisplay = ['2', '18', '20', '21', '22', '23']
       p = p.filter(pro => noDisplay.indexOf(pro.id + '') === -1)
 
       // p.sort((a, b) => a.position > b.position ? 1 : -1)
